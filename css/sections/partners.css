@@ -1,3 +1,7 @@
+.partners {
+  background: rgb(var(--bg-raised));
+}
+
 .partners-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

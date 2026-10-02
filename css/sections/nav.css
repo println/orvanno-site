@@ -16,7 +16,7 @@
 
 .nav-brand {
   flex: 1;
-  color: rgb(var(--text));
+  color: rgb(var(--heading));
   text-decoration: none;
 }
 
@@ -41,7 +41,6 @@
   min-height: 2.75rem;
 }
 
-.nav-theme,
 .nav-menu-toggle {
   display: inline-flex;
   align-items: center;
@@ -54,14 +53,9 @@
   font-size: 0.875rem;
 }
 
-.nav-theme:hover,
 .nav-menu-toggle:hover {
   border-color: rgb(var(--accent-text));
   color: rgb(var(--accent-text));
-}
-
-.nav-theme[hidden] {
-  display: none;
 }
 
 .nav-menu {
@@ -106,7 +100,6 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .nav-theme,
   .nav-menu-toggle,
   .nav-menu-list a {
     transition: color 200ms, border-color 200ms, background-color 200ms;

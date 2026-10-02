@@ -1,3 +1,7 @@
+.showcase {
+  background: rgb(var(--bg-raised));
+}
+
 .showcase-tabs {
   display: flex;
   gap: var(--space-s);

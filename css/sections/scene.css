@@ -1,3 +1,7 @@
+.scene {
+  background: rgb(var(--bg-raised));
+}
+
 .scene-moments {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

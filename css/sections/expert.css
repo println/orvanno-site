@@ -1,3 +1,7 @@
+.expert {
+  background: rgb(var(--bg-raised));
+}
+
 .expert-inner {
   display: grid;
   gap: var(--space-l);

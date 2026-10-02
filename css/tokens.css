@@ -1,24 +1,24 @@
 :root {
-  color-scheme: light;
-  --primary: 69, 52, 34;
-  --primary-deep: 60, 45, 30;
-  --secondary: 140, 129, 111;
-  --on-primary: 242, 236, 226;
-  --bg: 250, 248, 244;
-  --bg-raised: 239, 232, 220;
-  --surface-strong: 216, 199, 170;
-  --surface-lit: 255, 255, 255;
-  --text: 60, 45, 30;
-  --heading: 60, 45, 30;
-  --muted: 106, 98, 84;
-  --line: 174, 161, 138;
+  color-scheme: dark;
+  --primary: 217, 175, 102;
+  --primary-deep: 187, 147, 106;
+  --secondary: 155, 144, 133;
+  --on-primary: 38, 38, 35;
+  --bg: 38, 38, 35;
+  --bg-raised: 69, 52, 34;
+  --surface-strong: 82, 69, 64;
+  --surface-lit: 88, 86, 82;
+  --text: 216, 215, 208;
+  --heading: 216, 199, 170;
+  --muted: 173, 170, 164;
+  --line: 131, 127, 122;
   --frame: 187, 147, 106;
   --accent: 217, 175, 102;
-  --accent-text: 106, 86, 50;
-  --wood: 196, 148, 96;
-  --whatsapp: 41, 163, 82;
-  --placeholder: 221, 221, 221;
-  --gradient: linear-gradient(90deg, rgb(140, 113, 66), rgb(110, 86, 63));
+  --accent-text: 217, 175, 102;
+  --wood: 118, 102, 90;
+  --whatsapp: 38, 38, 35;
+  --placeholder: 82, 69, 64;
+  --gradient: linear-gradient(90deg, rgb(217, 175, 102), rgb(187, 147, 106));
   --radius: 0.25rem;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-heading: "Inter Tight", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -32,43 +32,4 @@
   --width-max: 72rem;
   --reading-width: 65ch;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --primary: 217, 175, 102;
-    --primary-deep: 187, 147, 106;
-    --secondary: 174, 161, 138;
-    --on-primary: 60, 45, 30;
-    --bg: 60, 45, 30;
-    --bg-raised: 69, 52, 34;
-    --surface-strong: 72, 67, 57;
-    --surface-lit: 76, 59, 43;
-    --text: 242, 236, 226;
-    --heading: 216, 199, 170;
-    --muted: 174, 161, 138;
-    --accent-text: 217, 175, 102;
-    --whatsapp: 60, 45, 30;
-    --placeholder: 72, 67, 57;
-    --gradient: linear-gradient(90deg, rgb(217, 175, 102), rgb(187, 147, 106));
-  }
-}
-
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --primary: 217, 175, 102;
-  --primary-deep: 187, 147, 106;
-  --secondary: 174, 161, 138;
-  --on-primary: 60, 45, 30;
-  --bg: 60, 45, 30;
-  --bg-raised: 69, 52, 34;
-  --surface-strong: 72, 67, 57;
-  --surface-lit: 76, 59, 43;
-  --text: 242, 236, 226;
-  --heading: 216, 199, 170;
-  --muted: 174, 161, 138;
-  --accent-text: 217, 175, 102;
-  --whatsapp: 60, 45, 30;
-  --placeholder: 72, 67, 57;
-  --gradient: linear-gradient(90deg, rgb(217, 175, 102), rgb(187, 147, 106));
 }

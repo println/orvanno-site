@@ -11,11 +11,12 @@
   padding: var(--space-m);
   border: 1px solid rgb(var(--line));
   border-radius: var(--radius);
-  background: rgb(var(--bg-raised));
+  background: rgb(var(--surface-lit));
 }
 
 .cta-form-title {
   margin-bottom: 0;
+  color: rgb(var(--text));
 }
 
 .cta-step {
@@ -94,6 +95,6 @@
 
 .cta-form-status {
   margin: 0;
-  color: rgb(var(--muted));
+  color: rgb(var(--text));
   font-size: 0.875rem;
 }
