@@ -6,7 +6,7 @@
 }
 
 main > section {
-  padding-block: var(--space-l);
+  padding-block: var(--space-xl);
   border-bottom: 1px solid rgb(var(--line));
 }
 
@@ -30,6 +30,6 @@ main > section {
   }
 
   main > section {
-    padding-block: var(--space-xl);
+    padding-block: var(--space-2xl);
   }
 }

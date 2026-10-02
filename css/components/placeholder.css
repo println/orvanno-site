@@ -1,12 +1,14 @@
 .placeholder {
   display: grid;
-  place-items: center;
+  gap: var(--space-s);
+  place-content: center;
+  justify-items: center;
   width: 100%;
-  padding: var(--space-s);
-  border: 1px dashed rgb(var(--muted));
+  padding: var(--space-m);
+  border: 1px solid rgb(var(--frame));
   border-radius: var(--radius);
   background: rgb(var(--placeholder));
-  color: rgb(var(--muted));
+  color: rgb(var(--text));
   font-size: 0.875rem;
   text-align: center;
 }
