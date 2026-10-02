@@ -1,0 +1,21 @@
+.scene-moments {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-m);
+  padding: 0;
+  list-style: none;
+}
+
+.scene-moment-title {
+  margin: var(--space-s) 0 var(--space-xs);
+}
+
+.scene-caption {
+  margin: 0;
+}
+
+@media (min-width: 64em) {
+  .scene-moments {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

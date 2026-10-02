@@ -1,0 +1,18 @@
+.fit-columns {
+  display: grid;
+  gap: var(--space-l);
+  margin-bottom: var(--space-l);
+}
+
+.fit-list {
+  display: grid;
+  gap: var(--space-xs);
+  margin-bottom: 0;
+  padding-left: var(--space-m);
+}
+
+@media (min-width: 40em) {
+  .fit-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

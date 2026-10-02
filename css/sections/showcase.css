@@ -1,0 +1,38 @@
+.showcase-tabs {
+  display: flex;
+  gap: var(--space-s);
+  padding: 0 0 var(--space-s);
+  overflow-x: auto;
+  list-style: none;
+}
+
+.showcase-tab {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: var(--space-s) var(--space-m);
+  border: 1px solid rgb(var(--line));
+  border-radius: var(--radius);
+  white-space: nowrap;
+}
+
+.showcase-panels {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  gap: var(--space-m);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.showcase-panel {
+  scroll-snap-align: start;
+}
+
+@media (min-width: 64em) {
+  .showcase-panels {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-x: visible;
+  }
+}

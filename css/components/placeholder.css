@@ -1,0 +1,20 @@
+.placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding: var(--space-s);
+  border: 1px dashed rgb(var(--muted));
+  border-radius: var(--radius);
+  background: rgb(var(--placeholder));
+  color: rgb(var(--muted));
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.placeholder-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+.placeholder-4-5 {
+  aspect-ratio: 4 / 5;
+}

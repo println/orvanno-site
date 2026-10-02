@@ -1,0 +1,44 @@
+.process-steps {
+  display: grid;
+  gap: var(--space-m);
+  padding: 0;
+  list-style: none;
+  counter-reset: process-step;
+}
+
+.process-step {
+  position: relative;
+  padding-left: 2.75rem;
+  counter-increment: process-step;
+}
+
+.process-step::before {
+  content: counter(process-step);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgb(var(--primary-deep));
+  color: rgb(var(--on-primary));
+  font-weight: 600;
+}
+
+.process-step-title {
+  margin-bottom: var(--space-xs);
+  line-height: 2rem;
+}
+
+.process-step p {
+  margin-bottom: 0;
+}
+
+@media (min-width: 64em) {
+  .process-steps {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-l);
+  }
+}

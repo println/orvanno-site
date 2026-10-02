@@ -1,0 +1,28 @@
+.hero-inner {
+  display: grid;
+  gap: var(--space-l);
+}
+
+.hero-context {
+  color: rgb(var(--muted));
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.hero-note {
+  margin: var(--space-s) 0 0;
+  color: rgb(var(--muted));
+  font-size: 0.875rem;
+}
+
+.hero-lead {
+  color: rgb(var(--muted));
+  font-size: 1.125rem;
+}
+
+@media (min-width: 64em) {
+  .hero-inner {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}

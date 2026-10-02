@@ -1,0 +1,28 @@
+.trust {
+  background: rgb(var(--bg-raised));
+}
+
+.trust-list {
+  display: grid;
+  gap: var(--space-m);
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.trust-item {
+  padding-left: var(--space-m);
+  border-left: 2px solid rgb(var(--primary));
+  font-weight: 600;
+}
+
+@media (min-width: 40em) {
+  .trust-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .trust-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,26 @@
+.expert-inner {
+  display: grid;
+  gap: var(--space-l);
+}
+
+.expert-portrait {
+  max-width: 20rem;
+}
+
+.expert-rating {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+@media (min-width: 40em) {
+  .expert-inner {
+    grid-template-columns: 16rem 1fr;
+    align-items: center;
+  }
+}
+
+@media (min-width: 64em) {
+  .expert-inner {
+    grid-template-columns: 20rem 1fr;
+  }
+}

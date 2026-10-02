@@ -1,0 +1,23 @@
+.faq-list {
+  max-width: 48rem;
+}
+
+.faq-item {
+  border-top: 1px solid rgb(var(--line));
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid rgb(var(--line));
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  min-height: 3rem;
+  padding-block: var(--space-s);
+  font-weight: 600;
+}
+
+.faq-answer {
+  color: rgb(var(--muted));
+}

@@ -1,0 +1,12 @@
+.provisional {
+  display: inline-block;
+  padding: 0 var(--space-xs);
+  border-radius: calc(var(--radius) / 2);
+  background: rgb(var(--text));
+  color: rgb(var(--bg));
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  vertical-align: middle;
+  white-space: nowrap;
+}

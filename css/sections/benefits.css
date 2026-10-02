@@ -1,0 +1,29 @@
+.benefits-list {
+  display: grid;
+  gap: var(--space-m);
+  padding: 0;
+  list-style: none;
+}
+
+.benefits-card {
+  padding: var(--space-m);
+  border: 1px solid rgb(var(--line));
+  border-radius: var(--radius);
+  background: rgb(var(--bg-raised));
+}
+
+.benefits-card p {
+  margin-bottom: 0;
+}
+
+@media (min-width: 40em) {
+  .benefits-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .benefits-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

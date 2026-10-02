@@ -1,0 +1,23 @@
+.partners-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-s);
+  padding: 0;
+  list-style: none;
+}
+
+.partners-item {
+  display: grid;
+  place-items: center;
+  min-height: 4rem;
+  padding: var(--space-s);
+  border: 1px solid rgb(var(--line));
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+@media (min-width: 64em) {
+  .partners-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

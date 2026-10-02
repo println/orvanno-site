@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 8rem;
+}
+
+body {
+  margin: 0;
+  background: rgb(var(--bg));
+  color: rgb(var(--text));
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 var(--space-m);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+p,
+ul,
+ol,
+figure,
+blockquote {
+  margin: 0 0 var(--space-m);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: rgb(var(--primary-deep));
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgb(var(--primary-deep));
+  outline-offset: 2px;
+}
+
+summary {
+  cursor: pointer;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (min-width: 40em) {
+  html {
+    scroll-padding-top: 5rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 64em) {
+  h1 {
+    font-size: 2.75rem;
+  }
+}
