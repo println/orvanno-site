@@ -36,7 +36,7 @@
 
 .footer-slogan {
   display: block;
-  margin-top: var(--space-m);
+  margin-top: 0;
   color: rgb(var(--text));
   font-family: var(--font-accent);
   font-size: clamp(2.25rem, 2rem + 1vw, 2.75rem);
@@ -90,19 +90,6 @@
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
-}
-
-.footer-links li > .footer-icon {
-  margin-right: 0.25rem;
-}
-
-
-.footer .provisional {
-  border: 1px solid rgb(var(--muted));
-  background: transparent;
-  color: rgb(var(--muted));
-  font-size: 0.8125rem;
-  font-weight: 400;
 }
 
 .footer-bottom {
