@@ -58,9 +58,8 @@
 }
 
 .curation-site a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.75rem;
+  display: inline-block;
+  padding-block: 0.875rem;
 }
 
 .curation-steps {
