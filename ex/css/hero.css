@@ -1,5 +1,31 @@
+:root {
+  /* Editorial contrast: graphite, ivory and restrained architectural brass. */
+  --primary: 222, 174, 105;
+  --primary-deep: 190, 139, 75;
+  --secondary: 178, 165, 151;
+  --on-primary: 27, 28, 25;
+  --bg: 27, 28, 25;
+  --bg-raised: 54, 47, 38;
+  --surface-strong: 103, 81, 68;
+  --surface-lit: 211, 205, 194;
+  --text: 242, 239, 232;
+  --heading: 248, 245, 239;
+  --muted: 184, 181, 173;
+  --line: 108, 106, 99;
+  --frame: 181, 141, 98;
+  --accent: 222, 174, 105;
+  --accent-text: 230, 184, 116;
+  --wood: 137, 105, 83;
+  --whatsapp: 27, 28, 25;
+  --placeholder: 83, 69, 56;
+  --gradient: linear-gradient(100deg, rgb(248, 245, 239), rgb(226, 211, 190) 68%, rgb(222, 174, 105));
+}
+
 body {
   margin: 0;
+  background:
+    radial-gradient(circle at 72% 34%, rgba(var(--accent), 0.07), transparent 34rem),
+    rgb(var(--bg));
 }
 
 .visually-hidden,
@@ -25,18 +51,31 @@ body {
 }
 
 .topbar {
+  position: relative;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 3rem;
   padding-inline: var(--space-m);
+  background: rgb(244, 241, 235);
+}
+
+.topbar::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: rgba(var(--bg), 0.12);
 }
 
 .topbar-logo {
   display: block;
   width: auto;
   height: 1.25rem;
-  color: rgb(var(--heading));
+  color: rgb(var(--bg));
 }
 
 .topbar-cta {
@@ -63,15 +102,17 @@ body {
   color: rgb(var(--accent-text));
   font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
 }
 
 .hero-title {
   margin: 0;
   overflow-wrap: break-word;
-  font-size: 1.375rem;
-  line-height: 1.15;
+  font-size: 1.5rem;
+  font-weight: 200;
+  letter-spacing: 0.035em;
+  line-height: 1.08;
 }
 
 @supports (background-clip: text) {
@@ -290,8 +331,8 @@ body {
 
 .chip:has(input:checked) {
   border-color: rgb(var(--accent));
-  background: rgb(var(--bg-raised));
-  color: rgb(var(--accent-text));
+  background: rgba(var(--accent), 0.12);
+  color: rgb(var(--heading));
 }
 
 .hero-lead {
@@ -347,7 +388,7 @@ body {
 
 @media (min-width: 40em) {
   .hero-title {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
 
   .hero-scene {
@@ -380,7 +421,7 @@ body {
     z-index: 10;
     height: 4.5rem;
     padding-inline: var(--gutter);
-    background: rgb(var(--bg));
+    background: rgb(244, 241, 235);
   }
 
   .topbar-logo {
@@ -446,7 +487,7 @@ body {
   }
 
   .hero-title {
-    font-size: clamp(2rem, 3.4vw, 2.75rem);
+    font-size: clamp(2.4rem, 3.4vw, 3.35rem);
   }
 
   .hero-scene {

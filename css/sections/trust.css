@@ -1,7 +1,6 @@
 .trust {
   padding-block: var(--space-l);
   background: rgb(var(--bg-raised));
-  border-bottom: 1px solid rgb(var(--line));
 }
 
 .trust-list {
@@ -13,7 +12,7 @@
 
 .trust-item {
   padding-left: var(--space-m);
-  border-left: 2px solid rgb(var(--accent));
+  border-left: 1px solid rgb(var(--line));
   font-size: 0.9375rem;
   font-weight: 500;
   line-height: 1.4;

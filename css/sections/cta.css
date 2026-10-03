@@ -3,6 +3,11 @@
   align-content: start;
 }
 
+.cta-intro {
+  display: grid;
+  justify-items: start;
+}
+
 .cta-title {
   margin-bottom: var(--space-m);
 }
@@ -13,10 +18,6 @@
     background-clip: text;
     color: transparent;
   }
-}
-
-.cta .button {
-  justify-self: start;
 }
 
 .cta-hours {
@@ -62,15 +63,24 @@
   gap: var(--space-m);
   min-width: 0;
   margin: 0;
-  padding: var(--space-m);
-  border: 1px solid rgb(var(--line));
-  border-radius: var(--radius);
-  background: rgb(var(--bg));
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.cta-step:not(:last-of-type) {
+  padding-bottom: var(--space-m);
+  border-bottom: 1px solid rgb(var(--line));
 }
 
 .cta-step-title {
-  padding-inline: var(--space-xs);
-  font-weight: 600;
+  margin-bottom: var(--space-m);
+  padding: 0;
+  color: rgb(var(--text));
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .cta-field {
@@ -119,6 +129,9 @@
 
 .cta-form input[type="radio"],
 .cta-form input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
   accent-color: rgb(var(--primary));
 }
 
@@ -131,9 +144,7 @@
 }
 
 .cta-consent input {
-  width: 1.25rem;
-  height: 1.25rem;
-  margin: 0.125rem 0 0;
+  margin-top: 0.125rem;
 }
 
 .cta-submit {
@@ -155,20 +166,18 @@
 @media (min-width: 64em) {
   .cta > .wrap {
     grid-template-columns: minmax(0, 1fr) minmax(0, 36rem);
-    grid-template-rows: auto auto auto 1fr;
     column-gap: var(--space-2xl);
+    align-items: start;
   }
 
-  .cta-title,
-  .cta .lead,
-  .cta .button,
-  .cta-hours {
-    grid-column: 1;
+  .cta-intro {
+    position: sticky;
+    top: calc(var(--nav-height) + var(--space-l));
   }
 
   .cta-form {
     grid-column: 2;
-    grid-row: 1 / span 4;
+    grid-row: 1;
     margin-top: 0;
   }
 }

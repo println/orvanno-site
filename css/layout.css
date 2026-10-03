@@ -1,5 +1,6 @@
 :root {
   --wrap-pad: var(--space-m);
+  --nav-height: 3.5rem;
 }
 
 .wrap {
@@ -30,6 +31,7 @@ main > section {
 @media (min-width: 40em) {
   :root {
     --wrap-pad: var(--space-l);
+    --nav-height: 3.75rem;
   }
 
   main > section {

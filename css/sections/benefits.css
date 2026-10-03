@@ -15,7 +15,7 @@
 }
 
 .benefits-card {
-  padding: var(--space-l) var(--space-m);
+  padding: var(--space-l);
   background: rgb(var(--bg-raised));
 }
 
@@ -36,9 +36,5 @@
 @media (min-width: 64em) {
   .benefits-list {
     grid-template-columns: repeat(4, 1fr);
-  }
-
-  .benefits-card {
-    padding: var(--space-xl) var(--space-l);
   }
 }

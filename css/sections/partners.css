@@ -1,7 +1,6 @@
 .partners {
   padding-block: var(--space-xl);
   background: rgb(var(--bg-raised));
-  border-top: 1px solid rgb(var(--line));
 }
 
 .partners-list {
@@ -30,11 +29,5 @@
 @media (min-width: 40em) {
   .partners-list {
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 64em) {
-  .partners-list {
-    grid-template-columns: repeat(6, 1fr);
   }
 }

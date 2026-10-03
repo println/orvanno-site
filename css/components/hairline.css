@@ -1,0 +1,15 @@
+.hairline {
+  position: relative;
+}
+
+.hairline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: min(100% - 2 * var(--wrap-pad), var(--width-max) - 2 * var(--wrap-pad));
+  height: 1px;
+  margin-inline: auto;
+  background: rgb(var(--line));
+}

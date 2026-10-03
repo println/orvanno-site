@@ -1,0 +1,49 @@
+.sticky-action {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  height: calc(4rem + env(safe-area-inset-bottom));
+  padding: 0 var(--wrap-pad) env(safe-area-inset-bottom);
+  border-top: 1px solid rgb(var(--accent));
+  background: rgb(var(--bg));
+  visibility: hidden;
+  transform: translateY(100%);
+}
+
+.sticky-action.is-visible {
+  visibility: visible;
+  transform: none;
+}
+
+.sticky-action .button {
+  flex: 1;
+  min-height: 3rem;
+}
+
+.has-sticky-action .footer {
+  padding-bottom: calc(var(--space-xl) + 4rem + env(safe-area-inset-bottom));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sticky-action {
+    transition: transform 200ms ease-out, visibility 0s 200ms;
+  }
+
+  .sticky-action.is-visible {
+    transition: transform 200ms ease-out;
+  }
+}
+
+@media (min-width: 40em) {
+  .sticky-action {
+    display: none;
+  }
+
+  .has-sticky-action .footer {
+    padding-bottom: var(--space-xl);
+  }
+}

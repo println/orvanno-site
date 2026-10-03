@@ -2,16 +2,16 @@
   position: sticky;
   top: 0;
   z-index: 10;
+  height: var(--nav-height);
   background: rgb(var(--bg));
   border-bottom: 1px solid rgb(var(--line));
 }
 
 .nav-inner {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: var(--space-s);
-  padding-block: var(--space-s);
+  height: 100%;
 }
 
 .nav-brand {
@@ -27,12 +27,9 @@
 }
 
 .nav-contact {
-  order: 3;
-  display: flex;
-  flex-basis: 100%;
+  display: none;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-s);
+  gap: var(--space-m);
 }
 
 .nav-instagram {
@@ -56,6 +53,20 @@
 .nav-menu-toggle:hover {
   border-color: rgb(var(--accent-text));
   color: rgb(var(--accent-text));
+}
+
+.nav-action {
+  border: 1px solid rgb(var(--accent));
+  background: transparent;
+  color: rgb(var(--accent-text));
+}
+
+.nav-action:hover {
+  background: rgb(var(--bg-raised));
+}
+
+.nav-action .button-icon {
+  fill: rgb(var(--accent-text));
 }
 
 .nav-menu {
@@ -100,6 +111,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .nav-action,
   .nav-menu-toggle,
   .nav-menu-list a {
     transition: color 200ms, border-color 200ms, background-color 200ms;
@@ -108,8 +120,10 @@
 
 @media (min-width: 40em) {
   .nav-contact {
-    order: 0;
-    flex-basis: auto;
-    gap: var(--space-m);
+    display: flex;
+  }
+
+  .nav-menu-social {
+    display: none;
   }
 }

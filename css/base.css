@@ -5,7 +5,7 @@
 }
 
 html {
-  scroll-padding-top: 8rem;
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -116,10 +116,6 @@ address {
 }
 
 @media (min-width: 40em) {
-  html {
-    scroll-padding-top: 5rem;
-  }
-
   h1 {
     font-size: 2.25rem;
   }

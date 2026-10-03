@@ -59,11 +59,30 @@
 }
 
 @media (min-width: 64em) {
+  .showcase-tabs {
+    display: none;
+  }
+
   .showcase-panels {
     grid-auto-flow: row;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-l) var(--space-m);
     padding-bottom: 0;
     overflow-x: visible;
+  }
+
+  .showcase-panel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .showcase-panel:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .showcase-panel:first-child .placeholder {
+    flex: 1;
+    aspect-ratio: auto;
   }
 }

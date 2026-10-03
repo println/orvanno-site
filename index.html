@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/components/lead.css">
   <link rel="stylesheet" href="css/components/eyebrow.css">
   <link rel="stylesheet" href="css/components/chevron.css">
+  <link rel="stylesheet" href="css/components/hairline.css">
   <link rel="stylesheet" href="css/sections/nav.css">
   <link rel="stylesheet" href="css/sections/hero.css">
   <link rel="stylesheet" href="css/sections/trust.css">
@@ -33,7 +34,9 @@
   <link rel="stylesheet" href="css/sections/faq.css">
   <link rel="stylesheet" href="css/sections/cta.css">
   <link rel="stylesheet" href="css/sections/footer.css">
+  <link rel="stylesheet" href="css/sections/sticky-action.css">
   <script type="module" src="js/reveal.js"></script>
+  <script type="module" src="js/sticky-action.js"></script>
 </head>
 <body>
   <svg class="icon-sprite" aria-hidden="true" focusable="false">
@@ -57,7 +60,7 @@
       </a>
       <div class="nav-contact">
         <a class="nav-instagram" href="https://www.instagram.com/orvannovr/">Instagram</a>
-        <a class="button" href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20gostaria%20de%20agendar%20um%20atendimento."><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Agendar atendimento</a>
+        <a class="button nav-action" href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20gostaria%20de%20agendar%20um%20atendimento."><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Agendar atendimento</a>
       </div>
       <details class="nav-menu">
         <summary class="nav-menu-toggle">Menu</summary>
@@ -69,6 +72,7 @@
             <li><a href="#expert">Quem projeta</a></li>
             <li><a href="#faq">Perguntas frequentes</a></li>
             <li><a href="#cta">Contato</a></li>
+            <li class="nav-menu-social"><a href="https://www.instagram.com/orvannovr/">Instagram</a></li>
           </ul>
         </nav>
       </details>
@@ -82,7 +86,7 @@
           <p class="hero-context">Móveis planejados de alto padrão</p>
           <h1 class="hero-title">Você não está comprando um móvel. Está decidindo como quer viver.</h1>
           <p class="hero-lead">Móveis sob medida, pensados a partir da sua rotina e aprovados por você em 3D antes de irem para a fábrica.</p>
-          <a class="button" href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20gostaria%20de%20agendar%20um%20atendimento."><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Agendar atendimento</a>
+          <a class="button" data-primary-action href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20gostaria%20de%20agendar%20um%20atendimento."><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Agendar atendimento</a>
           <p class="hero-note">Pelo WhatsApp, você agenda uma conversa na loja.</p>
         </div>
         <div class="placeholder placeholder-4-3">família na cozinha, troca de estilo · 4:3 <span class="provisional">[provisório]</span></div>
@@ -98,7 +102,7 @@
       </ul>
     </section>
 
-    <section class="scene" id="scene">
+    <section class="scene hairline" id="scene">
       <div class="wrap">
         <h2 class="scene-title">Um móvel, um papel para cada momento do dia</h2>
         <p class="lead">O projeto parte da sua rotina: alturas, acessos e circulação pensados para quem usa o ambiente.</p>
@@ -328,10 +332,12 @@
       </div>
     </section>
 
-    <section class="process" id="process">
+    <section class="process hairline" id="process">
       <div class="wrap">
-        <h2 class="process-title">Da primeira conversa ao pós-venda</h2>
-        <p class="lead">Você aprova o projeto em 3D antes de qualquer peça ir para a fábrica.</p>
+        <div class="process-intro">
+          <h2 class="process-title">Da primeira conversa ao pós-venda</h2>
+          <p class="lead">Você aprova o projeto em 3D antes de qualquer peça ir para a fábrica.</p>
+        </div>
         <ol class="process-steps">
           <li class="process-step">
             <h3 class="process-step-title">Conversa na loja.</h3>
@@ -367,7 +373,9 @@
 
     <section class="expert seam" id="expert">
       <div class="expert-inner wrap">
-        <div class="placeholder placeholder-4-5 expert-portrait">retrato da Iris · 4:5</div>
+        <div class="expert-media">
+          <div class="placeholder placeholder-4-5">retrato da Iris · 4:5</div>
+        </div>
         <div class="expert-text">
           <h2 class="expert-title">Quem desenha o seu projeto é uma arquiteta</h2>
           <p>Iris é formada em Arquitetura e Urbanismo. Ela transforma a sua rotina em decisões de projeto: alturas, acessos, divisões internas e materiais.</p>
@@ -378,7 +386,7 @@
       </div>
     </section>
 
-    <section class="partners" id="partners">
+    <section class="partners hairline" id="partners">
       <div class="wrap">
         <h2 class="partners-title">Parceiros <span class="provisional">[provisório]</span></h2>
         <p class="lead">Profissionais e empresas que trabalham com a Orvanno.</p>
@@ -418,7 +426,7 @@
             </ul>
           </div>
         </div>
-        <a class="button" href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20gostaria%20de%20agendar%20um%20atendimento."><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Agendar atendimento</a>
+        <a class="button" data-primary-action href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20gostaria%20de%20agendar%20um%20atendimento."><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Agendar atendimento</a>
       </div>
     </section>
 
@@ -468,10 +476,12 @@
 
     <section class="cta seam" id="cta">
       <div class="wrap">
-        <h2 class="cta-title">Móveis planejados para acompanhar a sua vida.</h2>
-        <p class="lead">Agende uma conversa na loja pelo WhatsApp.</p>
-        <a class="button" href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20gostaria%20de%20agendar%20um%20atendimento."><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Agendar atendimento</a>
-        <p class="cta-hours">Segunda a sexta, das 9h às 17h. Sábado com hora marcada.</p>
+        <div class="cta-intro">
+          <h2 class="cta-title">Móveis planejados para acompanhar a sua vida.</h2>
+          <p class="lead">Agende uma conversa na loja pelo WhatsApp.</p>
+          <a class="button" data-primary-action href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20gostaria%20de%20agendar%20um%20atendimento."><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Agendar atendimento</a>
+          <p class="cta-hours">Segunda a sexta, das 9h às 17h. Sábado com hora marcada.</p>
+        </div>
 
         <form class="cta-form" method="post" aria-labelledby="cta-form-title">
           <h3 class="cta-form-title" id="cta-form-title">Prefere que a Orvanno chame você?</h3>
@@ -554,6 +564,10 @@
       <p class="footer-legal">Política de privacidade e termos de uso <span class="provisional">[provisório]</span></p>
     </div>
   </footer>
+
+  <div class="sticky-action">
+    <a class="button" href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20gostaria%20de%20agendar%20um%20atendimento."><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Agendar atendimento</a>
+  </div>
 
 </body>
 </html>

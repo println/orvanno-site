@@ -2,6 +2,10 @@
   margin-top: var(--space-xl);
 }
 
+.lead + .details-group {
+  margin-top: 3rem;
+}
+
 .details-group-title {
   margin-bottom: var(--space-xs);
 }
@@ -42,7 +46,7 @@
 .details-swatches-strip .details-swatch img {
   width: calc(100% + 1px);
   margin-inline: 0;
-  aspect-ratio: 1 / 3;
+  aspect-ratio: 1 / 2;
   border-radius: 0;
 }
 
@@ -59,7 +63,7 @@
 .details-swatch-square img {
   aspect-ratio: 1;
   object-fit: contain;
-  background: #fff;
+  background: rgb(var(--swatch-bg));
 }
 
 .details-swatch figcaption {
@@ -120,5 +124,9 @@
 
   .details-swatches-featured {
     grid-template-columns: repeat(8, 1fr);
+  }
+
+  .details-swatches-strip .details-swatch img {
+    aspect-ratio: 1 / 3;
   }
 }
