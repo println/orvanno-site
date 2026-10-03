@@ -9,7 +9,7 @@
 }
 
 .curation-portrait {
-  max-width: 24rem;
+  max-width: none;
   margin: 0 0 var(--space-l);
 }
 
@@ -150,6 +150,12 @@
 }
 
 /* No celular, o título e o apoio vêm antes da foto e da nota; os passos, por último. */
+@media (min-width: 40em) and (max-width: 63.99em) {
+  .curation-portrait {
+    max-width: 28rem;
+  }
+}
+
 @media (max-width: 63.99em) {
   .curation-inner {
     gap: 0;

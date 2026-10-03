@@ -74,6 +74,15 @@ a {
   text-decoration-thickness: 1px;
 }
 
+a[target="_blank"]:not(.button)::after {
+  content: "\2197" / " (abre em nova aba)";
+  display: inline-block;
+  margin-left: 0.3em;
+  font-size: 0.85em;
+  line-height: 1;
+  text-decoration: none;
+}
+
 ::selection {
   background: rgba(var(--accent), 0.35);
 }
