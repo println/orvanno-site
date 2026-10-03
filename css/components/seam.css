@@ -1,17 +1,3 @@
 .seam {
   position: relative;
 }
-
-.seam::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: 0;
-  left: 0;
-  width: min(100% - 2 * var(--wrap-pad), var(--width-max) - 2 * var(--wrap-pad));
-  height: 2px;
-  margin-inline: auto;
-  background: rgb(var(--accent));
-  box-shadow: 0 0 6px rgba(var(--accent), 0.3);
-  transform-origin: left;
-}

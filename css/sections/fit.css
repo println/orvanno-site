@@ -1,51 +1,42 @@
 .fit-columns {
   display: grid;
-  gap: var(--space-xl) var(--space-2xl);
-  margin-bottom: var(--space-xl);
-}
-
-.fit-group {
-  padding-top: var(--space-m);
-  border-top: 1px solid rgb(var(--line));
-}
-
-.fit-group:first-child {
-  border-top-color: rgb(var(--accent));
+  gap: var(--space-xl);
+  margin: var(--space-xl) 0 0;
 }
 
 .fit-group-title {
-  margin-bottom: var(--space-m);
+  margin-bottom: var(--space-l);
+  padding-bottom: var(--space-m);
+  border-bottom: 1px solid rgb(var(--frame));
+  color: rgb(var(--accent-text));
+  font-size: 0.6875rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.fit-group + .fit-group .fit-group-title {
+  color: rgb(var(--muted));
 }
 
 .fit-list {
   display: grid;
-  gap: var(--space-s);
+  gap: var(--space-m);
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .fit-list li {
-  position: relative;
-  padding-left: var(--space-l);
+  color: rgb(var(--text));
 }
 
-.fit-list li::before {
-  content: "";
-  position: absolute;
-  top: 0.8em;
-  left: 0;
-  width: 0.75rem;
-  height: 2px;
-  background: rgb(var(--secondary));
+.fit-group + .fit-group .fit-list li {
+  color: rgb(var(--muted));
 }
 
-.fit-group:first-child .fit-list li::before {
-  background: rgb(var(--accent));
-}
-
-@media (min-width: 40em) {
+@media (min-width: 64em) {
   .fit-columns {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 6rem;
   }
 }

@@ -1,6 +1,6 @@
 .lead {
-  max-width: var(--reading-width);
-  margin-bottom: var(--space-l);
+  max-width: 44ch;
+  margin-bottom: var(--space-xl);
   color: rgb(var(--muted));
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
 }

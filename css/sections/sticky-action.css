@@ -8,8 +8,10 @@
   align-items: center;
   height: calc(4rem + env(safe-area-inset-bottom));
   padding: 0 var(--wrap-pad) env(safe-area-inset-bottom);
-  border-top: 1px solid rgb(var(--accent));
-  background: rgb(var(--bg));
+  border-top: 1px solid rgb(var(--line));
+  background: rgba(var(--bg), 0.94);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   visibility: hidden;
   transform: translateY(100%);
 }

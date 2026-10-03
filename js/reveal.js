@@ -13,7 +13,7 @@ function prepare() {
   if (reduced || !("IntersectionObserver" in window)) return;
 
   const observer = new IntersectionObserver(revealSection, { rootMargin: "0px 0px -10% 0px" });
-  const sections = document.querySelectorAll("main > section:not(.hero), .footer");
+  const sections = document.querySelectorAll("main > section:not(.hero, .intro), .footer");
 
   for (const section of sections) {
     if (section.getBoundingClientRect().top < window.innerHeight * REVEAL_LINE) continue;

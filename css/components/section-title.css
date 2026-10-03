@@ -1,0 +1,8 @@
+.section-title {
+  max-width: 18ch;
+  margin-bottom: var(--space-l);
+  font-size: clamp(2.125rem, 1.4rem + 3vw, 3.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}

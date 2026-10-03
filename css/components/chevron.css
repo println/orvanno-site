@@ -11,23 +11,20 @@
 }
 
 .chevron::after {
-  content: "";
+  content: "+";
   flex: none;
-  width: 0.5rem;
-  height: 0.5rem;
-  margin-top: -0.25rem;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: rotate(45deg);
+  color: rgb(var(--accent-text));
+  font-size: 1.25rem;
+  font-weight: 200;
+  line-height: 1;
 }
 
 details[open] > .chevron::after {
-  margin-top: 0.25rem;
-  transform: rotate(-135deg);
+  transform: rotate(45deg);
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .chevron::after {
-    transition: transform 200ms;
+    transition: transform 300ms;
   }
 }

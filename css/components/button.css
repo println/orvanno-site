@@ -2,38 +2,49 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-s);
-  min-height: 2.75rem;
-  padding: var(--space-s) var(--space-m);
-  border: 0;
-  border-radius: var(--radius);
+  gap: 0.75rem;
+  min-height: 3rem;
+  padding: var(--space-s) 1.75rem;
+  border: 1px solid rgb(var(--primary));
+  border-radius: 0;
   background: rgb(var(--primary));
   color: rgb(var(--on-primary));
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
 .button:hover {
+  border-color: rgb(var(--primary-deep));
   background: rgb(var(--primary-deep));
 }
 
 .button:disabled {
+  border-color: rgb(var(--line));
   background: rgb(var(--line));
   color: rgb(var(--text));
   cursor: not-allowed;
 }
 
+.button-lg {
+  min-height: 3.5rem;
+  padding: var(--space-s) 2.5rem;
+  font-size: 0.8125rem;
+}
+
 .button-icon {
   flex: none;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1rem;
+  height: 1rem;
   fill: rgb(var(--whatsapp));
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .button {
-    transition: background-color 200ms;
+    transition: background-color 300ms, border-color 300ms;
   }
 }

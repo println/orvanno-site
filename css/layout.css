@@ -1,6 +1,6 @@
 :root {
-  --wrap-pad: var(--space-m);
-  --nav-height: 3.5rem;
+  --wrap-pad: 1.25rem;
+  --nav-height: 4rem;
 }
 
 .wrap {
@@ -11,7 +11,7 @@
 }
 
 main > section {
-  padding-block: var(--space-xl);
+  padding-block: 5rem;
 }
 
 .skip-link {
@@ -31,10 +31,16 @@ main > section {
 @media (min-width: 40em) {
   :root {
     --wrap-pad: var(--space-l);
-    --nav-height: 3.75rem;
+    --nav-height: 5rem;
   }
 
   main > section {
     padding-block: var(--space-2xl);
+  }
+}
+
+@media (min-width: 64em) {
+  :root {
+    --wrap-pad: var(--space-xl);
   }
 }

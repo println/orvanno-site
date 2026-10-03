@@ -1,7 +1,7 @@
 .eyebrow {
   color: rgb(var(--accent-text));
-  font-size: 0.8125rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
 }

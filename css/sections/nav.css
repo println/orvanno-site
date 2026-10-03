@@ -3,77 +3,76 @@
   top: 0;
   z-index: 10;
   height: var(--nav-height);
-  background: rgb(var(--bg));
-  border-bottom: 1px solid rgb(var(--line));
+  border-bottom: 1px solid rgba(var(--heading), 0.08);
+}
+
+.nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(var(--bg), 0.86);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
 }
 
 .nav-inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-areas: "contact brand menu";
   align-items: center;
-  gap: var(--space-s);
+  gap: var(--space-l);
   height: 100%;
 }
 
 .nav-brand {
-  flex: 1;
+  grid-area: brand;
   color: rgb(var(--heading));
   text-decoration: none;
 }
 
 .nav-logo {
   display: block;
-  width: 9rem;
+  width: 10rem;
   height: auto;
 }
 
 .nav-contact {
+  grid-area: contact;
   display: none;
   align-items: center;
-  gap: var(--space-m);
+  gap: var(--space-l);
 }
 
 .nav-instagram {
   display: inline-flex;
   align-items: center;
   min-height: 2.75rem;
+  color: rgb(var(--text));
+  font-size: 0.6875rem;
+  letter-spacing: 0.24em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-instagram:hover {
+  color: rgb(var(--accent-text));
+}
+
+.nav-menu {
+  position: relative;
+  grid-area: menu;
+  justify-self: end;
 }
 
 .nav-menu-toggle {
   display: inline-flex;
   align-items: center;
   min-height: 2.75rem;
-  padding: var(--space-s) var(--space-m);
-  border: 1px solid rgb(var(--muted));
-  border-radius: var(--radius);
-  background: rgb(var(--bg));
   color: rgb(var(--text));
-  font-size: 0.875rem;
-}
-
-.nav-menu-toggle:hover {
-  border-color: rgb(var(--accent-text));
-  color: rgb(var(--accent-text));
-}
-
-.nav-action {
-  border: 1px solid rgb(var(--accent));
-  background: transparent;
-  color: rgb(var(--accent-text));
-}
-
-.nav-action:hover {
-  background: rgb(var(--bg-raised));
-}
-
-.nav-action .button-icon {
-  fill: rgb(var(--accent-text));
-}
-
-.nav-menu {
-  position: relative;
-}
-
-.nav-menu-toggle {
+  font-size: 0.6875rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
   list-style: none;
 }
 
@@ -81,46 +80,79 @@
   display: none;
 }
 
+.nav-menu-toggle:hover {
+  color: rgb(var(--accent-text));
+}
+
+.nav-menu[open] .nav-menu-toggle {
+  font-size: 0;
+}
+
+.nav-menu[open] .nav-menu-toggle::after {
+  content: "Fechar";
+  font-size: 0.6875rem;
+  letter-spacing: 0.24em;
+}
+
 .nav-menu-panel {
-  position: absolute;
-  top: calc(100% + var(--space-s));
+  position: fixed;
+  top: var(--nav-height);
   right: 0;
-  min-width: 15rem;
-  padding: var(--space-s);
-  border: 1px solid rgb(var(--line));
-  border-radius: var(--radius);
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-xl) var(--wrap-pad);
+  overflow-y: auto;
   background: rgb(var(--bg));
 }
 
 .nav-menu-list {
-  margin: 0;
+  width: 100%;
+  max-width: var(--width-max);
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
 
+.nav-menu-list li + li {
+  border-top: 1px solid rgb(var(--line));
+}
+
 .nav-menu-list a {
   display: block;
-  padding: var(--space-s);
-  border-radius: var(--radius);
-  color: rgb(var(--text));
+  padding: 1.125rem 0;
+  color: rgb(var(--heading));
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 1.4rem + 3vw, 3.5rem);
+  line-height: 1.1;
   text-decoration: none;
 }
 
 .nav-menu-list a:hover {
-  background: rgb(var(--bg-raised));
+  color: rgb(var(--accent-text));
+}
+
+body:has(.nav-menu[open]) {
+  overflow: hidden;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .nav-action,
+  .nav-instagram,
   .nav-menu-toggle,
   .nav-menu-list a {
-    transition: color 200ms, border-color 200ms, background-color 200ms;
+    transition: color 300ms;
   }
 }
 
 @media (min-width: 40em) {
   .nav-contact {
     display: flex;
+  }
+
+  .nav-logo {
+    width: 13rem;
   }
 
   .nav-menu-social {

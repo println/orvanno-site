@@ -1,0 +1,187 @@
+.contact-dialog {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+.contact-dialog::backdrop {
+  background: rgb(38, 38, 35);
+}
+
+.contact-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.contact-head {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-m);
+  height: var(--nav-height);
+  padding-inline: var(--wrap-pad);
+  border-bottom: 1px solid rgb(var(--line));
+}
+
+.contact-body {
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.contact-form {
+  display: grid;
+  gap: var(--space-l);
+  width: 100%;
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: var(--space-l) var(--wrap-pad) var(--space-xl);
+}
+
+.contact-title {
+  margin: 0;
+  font-size: clamp(1.25rem, 1rem + 1.2vw, 2rem);
+  line-height: 1.1;
+}
+
+.contact-lead {
+  margin: 0;
+  color: rgb(var(--muted));
+}
+
+.contact-field {
+  display: grid;
+  gap: var(--space-s);
+}
+
+.contact-label {
+  color: rgb(var(--accent-text));
+  font-size: 0.6875rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.contact-optional {
+  color: rgb(var(--muted));
+  letter-spacing: 0.08em;
+  text-transform: none;
+}
+
+.contact-input {
+  width: 100%;
+  min-height: 3rem;
+  padding: var(--space-s) 0;
+  border: 0;
+  border-bottom: 1px solid rgb(var(--frame));
+  border-radius: 0;
+  background: transparent;
+  color: rgb(var(--heading));
+  font-size: 1.0625rem;
+}
+
+.contact-input:focus {
+  border-bottom-color: rgb(var(--accent));
+  outline: none;
+}
+
+.contact-input:focus-visible {
+  outline: 2px solid rgb(var(--accent-text));
+  outline-offset: 2px;
+}
+
+.contact-input[aria-invalid] {
+  border-bottom-color: rgb(230, 140, 120);
+}
+
+.contact-select {
+  padding-right: 1.75rem;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none' stroke='%23D9AF66' stroke-width='1.2'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.25rem center;
+  background-size: 0.75rem;
+  cursor: pointer;
+}
+
+.contact-select:invalid {
+  color: rgb(var(--muted));
+}
+
+.contact-select option {
+  background: rgb(var(--bg));
+  color: rgb(var(--text));
+}
+
+.contact-row {
+  display: grid;
+  gap: var(--space-l);
+}
+
+.contact-radios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s) var(--space-l);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.contact-radios legend {
+  width: 100%;
+  margin-bottom: var(--space-s);
+  padding: 0;
+}
+
+.contact-radios label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-s);
+  min-height: 2.75rem;
+  color: rgb(var(--text));
+  cursor: pointer;
+}
+
+.contact-radios input {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0;
+  accent-color: rgb(var(--accent));
+}
+
+.contact-error {
+  margin: 0;
+  color: rgb(230, 140, 120);
+  font-size: 0.875rem;
+}
+
+.contact-error[hidden] {
+  display: none;
+}
+
+.contact-submit {
+  width: 100%;
+}
+
+.contact-note {
+  margin: 0;
+  color: rgb(var(--muted));
+  font-size: 0.8125rem;
+}
+
+body:has(.contact-dialog[open]) {
+  overflow: hidden;
+}
+
+@media (min-width: 40em) {
+  .contact-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

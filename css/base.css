@@ -14,7 +14,9 @@ body {
   color: rgb(var(--text));
   font-family: var(--font-body);
   font-size: 1rem;
-  line-height: 1.6;
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -24,29 +26,18 @@ h3 {
   margin: 0 0 var(--space-m);
   color: rgb(var(--heading));
   font-family: var(--font-heading);
-  line-height: 1.2;
-}
-
-h1,
-h2 {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
-h2::after {
-  content: "";
-  display: block;
-  width: 3rem;
-  height: 2px;
-  margin-top: var(--space-m);
-  background: rgb(var(--accent));
-  box-shadow: 0 0 6px rgba(var(--accent), 0.3);
-  transform-origin: left;
+  font-weight: 400;
+  line-height: 1.15;
 }
 
 h3 {
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+strong {
+  font-weight: 500;
 }
 
 h1 {
@@ -77,6 +68,12 @@ img {
 
 a {
   color: rgb(var(--accent-text));
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: 1px;
+}
+
+::selection {
+  background: rgba(var(--accent), 0.35);
 }
 
 [hidden] {
