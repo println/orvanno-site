@@ -1,31 +1,29 @@
 :root {
-  /* Editorial contrast: graphite, ivory and restrained architectural brass. */
-  --primary: 222, 174, 105;
-  --primary-deep: 190, 139, 75;
-  --secondary: 178, 165, 151;
-  --on-primary: 27, 28, 25;
-  --bg: 27, 28, 25;
-  --bg-raised: 54, 47, 38;
-  --surface-strong: 103, 81, 68;
-  --surface-lit: 211, 205, 194;
-  --text: 242, 239, 232;
-  --heading: 248, 245, 239;
-  --muted: 184, 181, 173;
-  --line: 108, 106, 99;
-  --frame: 181, 141, 98;
-  --accent: 222, 174, 105;
-  --accent-text: 230, 184, 116;
-  --wood: 137, 105, 83;
-  --whatsapp: 27, 28, 25;
-  --placeholder: 83, 69, 56;
-  --gradient: linear-gradient(100deg, rgb(248, 245, 239), rgb(226, 211, 190) 68%, rgb(222, 174, 105));
+  /* Spruce-inspired: charcoal, soft grey and warm natural accents. */
+  --primary: 226, 226, 227;
+  --primary-deep: 202, 202, 200;
+  --secondary: 164, 158, 151;
+  --on-primary: 25, 25, 25;
+  --bg: 25, 25, 25;
+  --bg-raised: 37, 37, 35;
+  --surface-strong: 92, 84, 76;
+  --surface-lit: 198, 194, 188;
+  --text: 226, 226, 227;
+  --heading: 226, 226, 227;
+  --muted: 160, 160, 157;
+  --line: 82, 82, 78;
+  --frame: 145, 134, 122;
+  --accent: 198, 178, 151;
+  --accent-text: 211, 193, 168;
+  --wood: 121, 101, 82;
+  --whatsapp: 25, 25, 25;
+  --placeholder: 72, 68, 64;
+  --gradient: linear-gradient(100deg, rgb(226, 226, 227), rgb(202, 198, 192));
 }
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at 72% 34%, rgba(var(--accent), 0.07), transparent 34rem),
-    rgb(var(--bg));
+  background: rgb(var(--bg));
 }
 
 .visually-hidden,
@@ -58,7 +56,7 @@ body {
   justify-content: center;
   height: 4rem;
   padding-inline: var(--space-m);
-  background: rgb(244, 241, 235);
+  background: rgba(var(--bg), 0.97);
 }
 
 .topbar::after {
@@ -68,14 +66,14 @@ body {
   bottom: 0;
   left: 0;
   height: 1px;
-  background: rgba(var(--bg), 0.12);
+  background: linear-gradient(90deg, transparent, rgba(var(--accent), 0.7), transparent);
 }
 
 .topbar-logo {
   display: block;
   width: auto;
   height: 1.7rem;
-  color: rgb(var(--bg));
+  color: rgb(var(--heading));
 }
 
 .topbar-cta {
@@ -83,16 +81,21 @@ body {
 }
 
 .hero .button {
-  border: 1px solid rgba(var(--heading), 0.55);
+  min-width: 13rem;
+  border: 1px solid rgba(var(--heading), 0.8);
+  border-radius: 999px;
   background: transparent;
   color: rgb(var(--heading));
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .hero .button:hover {
   border-color: rgb(var(--heading));
-  background: rgba(var(--heading), 0.08);
+  background: rgb(var(--heading));
+  color: rgb(var(--on-primary));
 }
 
 .hero-main {
@@ -114,8 +117,8 @@ body {
   margin: 0;
   overflow-wrap: break-word;
   font-size: 1.5rem;
-  font-weight: 200;
-  letter-spacing: 0.035em;
+  font-weight: 400;
+  letter-spacing: -0.02em;
   line-height: 1.08;
 }
 
@@ -133,7 +136,16 @@ body {
   height: clamp(15rem, 42svh, 22.5rem);
   margin-top: var(--space-m);
   overflow: hidden;
+  background: rgb(var(--bg-raised));
   touch-action: pan-y;
+}
+
+.hero-scene::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 0;
+  pointer-events: none;
 }
 
 .scene {
@@ -296,9 +308,9 @@ body {
   color: rgb(var(--heading));
   font-family: var(--font-heading);
   font-size: clamp(2.5rem, 13vw, 4.5rem);
-  font-weight: 200;
-  letter-spacing: -0.02em;
-  line-height: 0.9;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
   padding-top: 0.12em;
   text-transform: uppercase;
 }
@@ -413,7 +425,7 @@ body {
     z-index: 10;
     height: 5.25rem;
     padding-inline: var(--gutter);
-    background: rgb(244, 241, 235);
+    background: rgba(var(--bg), 0.97);
   }
 
   .topbar-logo {
@@ -422,9 +434,10 @@ body {
 
   .hero-main {
     display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-template-rows: 1fr repeat(3, auto) 1fr auto;
-    padding-left: var(--gutter);
+    grid-template-columns: minmax(0, 7fr) minmax(22rem, 5fr);
+    grid-template-rows: auto 1fr auto auto;
+    min-height: calc(100svh - 5.25rem);
+    padding-right: var(--gutter);
   }
 
   .hero-main > * {
@@ -432,29 +445,27 @@ body {
     margin-inline: 0;
   }
 
-  .hero-intro,
-  .persona,
-  .cta-bar {
-    grid-column: 1 / 6;
-    padding-right: var(--space-l);
-  }
-
   .hero-intro {
-    grid-row: 2;
-    margin-top: 0;
+    grid-column: 2;
+    grid-row: 1;
+    margin: clamp(3rem, 9vh, 7rem) 0 0 clamp(2rem, 5vw, 6rem);
   }
 
   .persona {
-    grid-row: 3;
-    margin-top: var(--space-l);
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    margin: var(--space-xl) 0 var(--space-l) clamp(2rem, 5vw, 6rem);
   }
 
   .cta-bar {
     position: static;
-    grid-row: 4;
-    margin-top: var(--space-l);
-    padding-block: 0;
-    border-top: 0;
+    grid-column: 2;
+    grid-row: 3;
+    width: auto;
+    margin: 0 0 var(--space-l) clamp(2rem, 5vw, 6rem);
+    padding: 0;
+    border: 0;
     background: none;
   }
 
@@ -464,36 +475,55 @@ body {
   }
 
   .hero-title {
-    font-size: clamp(2.4rem, 3.4vw, 3.35rem);
+    max-width: 13ch;
+    font-size: clamp(2.25rem, 3.2vw, 3.5rem);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.08;
   }
 
   .hero-scene {
-    grid-column: 6 / 13;
-    grid-row: 1 / 6;
-    width: auto;
-    height: min(calc(100svh - 9.5rem), 52rem);
-    margin-top: 0;
-    aspect-ratio: auto;
+    position: relative;
+    grid-column: 1;
+    grid-row: 1 / 5;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .hero-scene::after {
+    background: linear-gradient(180deg, transparent 66%, rgba(var(--bg), 0.68));
   }
 
   .scene {
-    position: static;
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     aspect-ratio: auto;
   }
 
+  .moment-role {
+    font-size: clamp(3.5rem, 5vw, 6rem);
+  }
+
+  .moment-text {
+    max-width: 30ch;
+  }
+
   .timeline {
-    grid-column: 1 / 7;
-    grid-row: 6;
-    margin: var(--space-s) var(--space-l) 0 0;
+    z-index: 2;
+    grid-column: 1;
+    grid-row: 4;
+    align-self: end;
+    margin: 0 var(--space-xl) var(--space-l);
   }
 
   .chips {
-    grid-column: 7 / 13;
-    grid-row: 6;
-    align-content: start;
-    justify-content: flex-end;
-    margin: var(--space-s) var(--gutter) 0 0;
+    grid-column: 2;
+    grid-row: 4;
+    align-content: end;
+    justify-content: flex-start;
+    margin: 0 0 var(--space-l) clamp(2rem, 5vw, 6rem);
   }
 }
