@@ -9,9 +9,9 @@
   border-radius: 0;
   background: rgb(var(--primary));
   color: rgb(var(--on-primary));
-  font-size: 0.75rem;
+  font-size: var(--text-button);
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.1em;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -33,7 +33,7 @@
 .button-lg {
   min-height: 3.5rem;
   padding: var(--space-s) 2.5rem;
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
 }
 
 .button-icon {

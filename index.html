@@ -30,7 +30,7 @@
   <meta name="twitter:image" content="https://orvanno.com.br/img/og-image.jpg">
   <meta name="twitter:image:alt" content="Logo da Orvanno Planejados e a frase “Móveis planejados para acompanhar a sua vida.” sobre fundo grafite e marrom, separados por uma linha de luz dourada.">
   <link rel="preload" href="fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/italiana.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-tight-variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/webp" href="img/hero/breakfast-1024.webp" imagesrcset="img/hero/breakfast-640.webp 640w, img/hero/breakfast-1024.webp 1024w, img/hero/breakfast-1600.webp 1600w, img/hero/breakfast-1920.webp 1920w" imagesizes="100vw" fetchpriority="high">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/tokens.css">
@@ -68,6 +68,7 @@
   <script type="module" src="js/dialog.js"></script>
   <script type="module" src="js/contact.js"></script>
   <script type="module" src="js/nav-menu.js"></script>
+  <script type="module" src="js/smooth-scroll.js"></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -120,17 +121,17 @@
         {
           "@type": "Question",
           "name": "Dá para resolver tudo pelo WhatsApp?",
-          "acceptedAnswer": { "@type": "Answer", "text": "O WhatsApp é o começo: lá você tira dúvidas e agenda a conversa na loja. O orçamento vem do projeto, e o projeto começa nessa conversa." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Não. O WhatsApp serve para tirar dúvidas e marcar a conversa na loja. O orçamento sai do projeto, que começa nessa conversa." }
         },
         {
           "@type": "Question",
           "name": "Vocês têm tabela de preços?",
-          "acceptedAnswer": { "@type": "Answer", "text": "O preço depende da espessura do MDF, da cor, do tipo de ferragem e da complexidade de cada projeto. Por isso o orçamento é feito sob medida, como os móveis." }
+          "acceptedAnswer": { "@type": "Answer", "text": "O preço depende da espessura do MDF, da cor, do tipo de ferragem e da complexidade de cada projeto. Por isso não há tabela: o orçamento sai depois do projeto." }
         },
         {
           "@type": "Question",
           "name": "Qual é o prazo de entrega?",
-          "acceptedAnswer": { "@type": "Answer", "text": "O prazo fica escrito no contrato e conta a partir da aprovação do projeto. Você acompanha cada etapa com a Orvanno até a montagem." }
+          "acceptedAnswer": { "@type": "Answer", "text": "O prazo fica escrito no contrato e conta a partir da aprovação do projeto. A Orvanno acompanha cada etapa até a montagem para cumprir o que foi combinado." }
         },
         {
           "@type": "Question",
@@ -212,13 +213,13 @@
   <main id="main">
     <section class="hero tone-dark" id="hero">
       <div class="hero-media" aria-roledescription="carrossel" aria-label="Momentos do dia na cozinha">
-          <img class="hero-slide is-active" src="img/hero/breakfast-1024.webp" srcset="img/hero/breakfast-640.webp 640w, img/hero/breakfast-1024.webp 1024w, img/hero/breakfast-1600.webp 1600w, img/hero/breakfast-1920.webp 1920w" sizes="100vw" fetchpriority="high" alt="Cozinha clara em madeira natural, com ilha central e iluminação embutida sob os armários." width="1024" height="576" data-moment="breakfast">
-          <img class="hero-slide" data-src="img/hero/prep-1024.webp" data-srcset="img/hero/prep-640.webp 640w, img/hero/prep-1024.webp 1024w, img/hero/prep-1600.webp 1600w, img/hero/prep-1920.webp 1920w" sizes="100vw" src="data:," loading="lazy" alt="Cozinha com ilha branca e armários em madeira escura, iluminada pela luz do dia que entra pela janela." width="1024" height="576" data-moment="prep" aria-hidden="true">
-          <img class="hero-slide" data-src="img/hero/homework-1024.webp" data-srcset="img/hero/homework-640.webp 640w, img/hero/homework-1024.webp 1024w" sizes="100vw" src="data:," loading="lazy" alt="Ilha em mármore claro com banquetas, nichos iluminados e armários em madeira escura." width="1024" height="576" data-moment="homework" aria-hidden="true">
-          <img class="hero-slide" data-src="img/hero/arrival-1024.webp" data-srcset="img/hero/arrival-640.webp 640w, img/hero/arrival-1024.webp 1024w" sizes="100vw" src="data:," loading="lazy" alt="Cozinha em madeira escura no fim da tarde, com pendentes acesos sobre a ilha e a janela escurecendo." width="1024" height="576" data-moment="arrival" aria-hidden="true">
-          <img class="hero-slide" data-src="img/hero/lights-1024.webp" data-srcset="img/hero/lights-640.webp 640w, img/hero/lights-1024.webp 1024w, img/hero/lights-1600.webp 1600w, img/hero/lights-1920.webp 1920w" sizes="100vw" src="data:," loading="lazy" alt="Cozinha em madeira à noite, só com a iluminação embutida acesa e a bancada livre." width="1024" height="576" data-moment="lights" aria-hidden="true">
-          <img class="hero-slide" data-src="img/hero/friends-1024.webp" data-srcset="img/hero/friends-640.webp 640w, img/hero/friends-1024.webp 1024w, img/hero/friends-1600.webp 1600w" sizes="100vw" src="data:," loading="lazy" alt="Cozinha com ilha em mármore escuro, banquetas e lustres de cristal acesos à noite." width="1024" height="576" data-moment="friends" aria-hidden="true">
-          <img class="hero-slide" data-src="img/hero/grandparents-1024.webp" data-srcset="img/hero/grandparents-640.webp 640w, img/hero/grandparents-1024.webp 1024w, img/hero/grandparents-1600.webp 1600w, img/hero/grandparents-1920.webp 1920w" sizes="100vw" src="data:," loading="lazy" alt="Cozinha ampla com mesa longa de madeira junto à bancada, prateleiras abertas e luz do dia." width="1024" height="576" data-moment="grandparents" aria-hidden="true">
+          <img class="hero-slide is-active" src="img/hero/breakfast-1024.webp" srcset="img/hero/breakfast-640.webp 640w, img/hero/breakfast-1024.webp 1024w, img/hero/breakfast-1600.webp 1600w, img/hero/breakfast-1920.webp 1920w" sizes="(max-aspect-ratio: 1/1) 160vh, 100vw" fetchpriority="high" alt="Cozinha clara em madeira natural, com ilha central e iluminação embutida sob os armários." width="1024" height="576" data-moment="breakfast">
+          <img class="hero-slide" data-src="img/hero/prep-1024.webp" data-srcset="img/hero/prep-640.webp 640w, img/hero/prep-1024.webp 1024w, img/hero/prep-1600.webp 1600w, img/hero/prep-1920.webp 1920w" sizes="(max-aspect-ratio: 1/1) 160vh, 100vw" src="data:," loading="lazy" alt="Cozinha com ilha branca e armários em madeira escura, iluminada pela luz do dia que entra pela janela." width="1024" height="576" data-moment="prep" aria-hidden="true">
+          <img class="hero-slide" data-src="img/hero/homework-1024.webp" data-srcset="img/hero/homework-640.webp 640w, img/hero/homework-1024.webp 1024w" sizes="(max-aspect-ratio: 1/1) 160vh, 100vw" src="data:," loading="lazy" alt="Ilha em mármore claro com banquetas, nichos iluminados e armários em madeira escura." width="1024" height="576" data-moment="homework" aria-hidden="true">
+          <img class="hero-slide" data-src="img/hero/arrival-1024.webp" data-srcset="img/hero/arrival-640.webp 640w, img/hero/arrival-1024.webp 1024w" sizes="(max-aspect-ratio: 1/1) 160vh, 100vw" src="data:," loading="lazy" alt="Cozinha em madeira escura no fim da tarde, com pendentes acesos sobre a ilha e a janela escurecendo." width="1024" height="576" data-moment="arrival" aria-hidden="true">
+          <img class="hero-slide" data-src="img/hero/lights-1024.webp" data-srcset="img/hero/lights-640.webp 640w, img/hero/lights-1024.webp 1024w, img/hero/lights-1600.webp 1600w, img/hero/lights-1920.webp 1920w" sizes="(max-aspect-ratio: 1/1) 160vh, 100vw" src="data:," loading="lazy" alt="Cozinha em madeira à noite, só com a iluminação embutida acesa e a bancada livre." width="1024" height="576" data-moment="lights" aria-hidden="true">
+          <img class="hero-slide" data-src="img/hero/friends-1024.webp" data-srcset="img/hero/friends-640.webp 640w, img/hero/friends-1024.webp 1024w, img/hero/friends-1600.webp 1600w" sizes="(max-aspect-ratio: 1/1) 160vh, 100vw" src="data:," loading="lazy" alt="Cozinha com ilha em mármore escuro, banquetas e lustres de cristal acesos à noite." width="1024" height="576" data-moment="friends" aria-hidden="true">
+          <img class="hero-slide" data-src="img/hero/grandparents-1024.webp" data-srcset="img/hero/grandparents-640.webp 640w, img/hero/grandparents-1024.webp 1024w, img/hero/grandparents-1600.webp 1600w, img/hero/grandparents-1920.webp 1920w" sizes="(max-aspect-ratio: 1/1) 160vh, 100vw" src="data:," loading="lazy" alt="Cozinha ampla com mesa longa de madeira junto à bancada, prateleiras abertas e luz do dia." width="1024" height="576" data-moment="grandparents" aria-hidden="true">
       </div>
       <div class="hero-inner wrap">
         <h1 class="hero-heading"><span class="hero-title"><span class="hero-title-lead">Você não está comprando um móvel.</span> <span class="hero-title-turn">Está decidindo como quer viver.</span></span></h1>
@@ -226,52 +227,52 @@
           <div class="hero-moment" data-moment="breakfast">
             <p class="hero-moment-time">6h40 · café da manhã</p>
             <p class="hero-moment-role">Organiza</p>
-            <p class="hero-moment-text">Cada coisa guardada perto de onde é usada.</p>
+            <p class="hero-moment-text">Cada coisa guardada perto de onde é usada</p>
           </div>
           <div class="hero-moment" data-moment="prep" hidden>
             <p class="hero-moment-time">11h30 · preparo</p>
             <p class="hero-moment-role">Facilita</p>
-            <p class="hero-moment-text">Do armário à panela, sem atravessar a cozinha.</p>
+            <p class="hero-moment-text">Do armário à panela, sem atravessar a cozinha</p>
           </div>
           <div class="hero-moment" data-moment="homework" hidden>
             <p class="hero-moment-time">15h · lição de casa</p>
             <p class="hero-moment-role">Acompanha</p>
-            <p class="hero-moment-text">A bancada vira mesa de estudo e continua sendo cozinha.</p>
+            <p class="hero-moment-text">A bancada vira mesa de estudo e continua sendo cozinha</p>
           </div>
           <div class="hero-moment" data-moment="arrival" hidden>
             <p class="hero-moment-time">18h30 · chegada</p>
             <p class="hero-moment-role">Acolhe</p>
-            <p class="hero-moment-text">Um lugar para encostar e contar como foi o dia.</p>
+            <p class="hero-moment-text">Um lugar para encostar e contar como foi o dia</p>
           </div>
           <div class="hero-moment" data-moment="lights" hidden>
             <p class="hero-moment-time">23h · luzes apagadas</p>
             <p class="hero-moment-role">Recolhe</p>
-            <p class="hero-moment-text">Tudo guardado, bancada livre.</p>
+            <p class="hero-moment-text">Tudo guardado, bancada livre</p>
           </div>
           <div class="hero-moment" data-moment="friends" hidden>
             <p class="hero-moment-time">sábado · amigos</p>
             <p class="hero-moment-role">Recebe</p>
-            <p class="hero-moment-text">Quem cozinha continua na conversa.</p>
+            <p class="hero-moment-text">Quem cozinha continua na conversa</p>
           </div>
           <div class="hero-moment" data-moment="grandparents" hidden>
             <p class="hero-moment-time">domingo · almoço com os avós</p>
             <p class="hero-moment-role">Reúne</p>
-            <p class="hero-moment-text">Todos por perto, em volta da mesma mesa.</p>
+            <p class="hero-moment-text">Todos por perto, em volta da mesma mesa</p>
           </div>
         </div>
         <div class="hero-timeline" hidden>
+          <span class="hero-progress" aria-hidden="true"></span>
           <ol class="hero-stops" aria-label="Momentos do dia">
             <li><button class="hero-stop" type="button" data-moment="breakfast" aria-pressed="true"><span class="hero-stop-time">6h40</span> <span class="hero-stop-name">café da manhã</span></button></li>
             <li><button class="hero-stop" type="button" data-moment="prep" aria-pressed="false"><span class="hero-stop-time">11h30</span> <span class="hero-stop-name">preparo</span></button></li>
             <li><button class="hero-stop" type="button" data-moment="homework" aria-pressed="false"><span class="hero-stop-time">15h</span> <span class="hero-stop-name">lição de casa</span></button></li>
             <li><button class="hero-stop" type="button" data-moment="arrival" aria-pressed="false"><span class="hero-stop-time">18h30</span> <span class="hero-stop-name">chegada</span></button></li>
             <li><button class="hero-stop" type="button" data-moment="lights" aria-pressed="false"><span class="hero-stop-time">23h</span> <span class="hero-stop-name">luzes apagadas</span></button></li>
-            <li><button class="hero-stop hero-stop-occasion" type="button" data-moment="friends" aria-pressed="false"><span class="hero-stop-time">sábado</span> <span class="hero-stop-name">amigos</span></button></li>
-            <li><button class="hero-stop hero-stop-occasion" type="button" data-moment="grandparents" aria-pressed="false"><span class="hero-stop-time">domingo</span> <span class="hero-stop-name">almoço com os avós</span></button></li>
+            <li><button class="hero-stop hero-stop-occasion" type="button" data-moment="friends" aria-pressed="false"><span class="hero-stop-time">sáb<span class="hero-stop-rest">ado</span></span> <span class="hero-stop-name">amigos</span></button></li>
+            <li><button class="hero-stop hero-stop-occasion" type="button" data-moment="grandparents" aria-pressed="false"><span class="hero-stop-time">dom<span class="hero-stop-rest">ingo</span></span> <span class="hero-stop-name">almoço com os avós</span></button></li>
           </ol>
-          <button class="hero-pause" type="button" aria-pressed="false" aria-label="Pausar a troca de momentos"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="hero-pause-bars" d="M9 6v12M15 6v12"/><path class="hero-pause-play" d="M8 6l10 6-10 6z"/></svg></button>
         </div>
-        <p class="hero-note">Imagens ilustrativas, geradas por inteligência artificial.</p>
+        <p class="hero-note">Imagens ilustrativas</p>
       </div>
     </section>
 
@@ -292,29 +293,30 @@
             <img src="img/equipe/iris-800.webp" srcset="img/equipe/iris-480.webp 480w, img/equipe/iris-800.webp 800w, img/equipe/iris-1120.webp 1120w" sizes="(min-width: 64em) 30vw, 90vw" alt="Iris, arquiteta da Orvanno, na loja, com amostras de materiais nas mãos." width="800" height="1000" loading="lazy">
           </figure>
             <div class="curation-proof">
-              <p class="rating rating-lg"><span class="rating-score">5,0</span> <span class="rating-label">no Google, com 23 avaliações</span></p>
-              <p class="curation-summary">Os clientes destacam a paciência da Iris para explicar materiais, texturas e sistemas de abertura, e projetos que ficaram como imaginaram.</p>
+              <p class="rating rating-lg"><span class="rating-score">5,0<span class="rating-stars" aria-hidden="true">★★★★★</span></span> <span class="rating-label">no Google, com 23 avaliações</span></p>
+              <p class="curation-summary">Nas avaliações, os clientes elogiam a paciência da Iris ao explicar materiais, texturas e sistemas de abertura, e dizem que o projeto ficou como imaginaram.</p>
               <p class="curation-link"><a href="https://www.google.com/maps/search/?api=1&amp;query=Orvanno%20Planejados%2C%20R.%20S%C3%A3o%20Pedro%2C%20126%2C%20Volta%20Redonda%20-%20RJ">Ver as avaliações no Google</a></p>
             </div>
           </aside>
           <div class="curation-main">
-            <p class="eyebrow">Curadoria Orvanno</p>
-            <h2 class="section-title curation-title">Decidir como você quer viver, com uma arquiteta ao seu lado.</h2>
+            <p class="eyebrow">Curadoria e atendimento boutique</p>
+            <h2 class="section-title curation-title">Decida como quer viver, <span class="title-turn">com a ajuda de uma arquiteta</span></h2>
             <p class="lead curation-lead">Iris é formada em Arquitetura e Urbanismo e conduz cada escolha do seu projeto, da primeira conversa na loja ao pós-venda.</p>
+            <p class="curation-link curation-site"><a href="https://irisvieiraarquitetura.com.br/" target="_blank" rel="noopener">Conheça o trabalho da Iris</a></p>
             <ol class="curation-steps">
           <li class="curation-step">
             <p class="curation-step-name">Escuta</p>
-            <h3 class="curation-step-title">Começa pela sua rotina.</h3>
-            <p class="curation-step-text">Numa conversa na loja, você conta quem mora na casa, como usa cada ambiente e o que hoje atrapalha. Depois vem a medição técnica do espaço.</p>
+            <h3 class="curation-step-title">Começa pela sua rotina</h3>
+            <p class="curation-step-text">Numa conversa exclusiva na loja, você conta quem mora na casa, como usa cada ambiente e o que hoje atrapalha. Depois vem a medição técnica do espaço.</p>
           </li>
           <li class="curation-step">
             <p class="curation-step-name">Seleção</p>
-            <h3 class="curation-step-title">Materiais escolhidos com a amostra na mão.</h3>
-            <p class="curation-step-text">Iris mostra padrões, texturas, puxadores e sistemas de abertura e explica onde cada um funciona melhor, pelo uso e pelo estilo do ambiente.</p>
+            <h3 class="curation-step-title">Materiais escolhidos com a amostra na mão</h3>
+            <p class="curation-step-text">Iris mostra padrões, texturas, puxadores e sistemas de abertura, e explica onde cada um funciona melhor, pelo uso e pelo estilo do ambiente.</p>
               <div class="finishes" id="details" data-zoomable>
                 <div class="finishes-head">
                   <h4 class="finishes-title">Cores, texturas e puxadores</h4>
-                  <p class="finishes-note">Uma seleção para começar.</p>
+                  <p class="finishes-note">Uma seleção para começar</p>
                   <button class="finishes-open" type="button" data-dialog-open="finishes-dialog" hidden>Ver todos os acabamentos</button>
                 </div>
                 <ul class="details-swatches details-swatches-featured details-swatches-strip">
@@ -331,13 +333,13 @@
           </li>
           <li class="curation-step">
             <p class="curation-step-name">Aprovação</p>
-            <h3 class="curation-step-title">Você vê o ambiente pronto antes da fabricação.</h3>
+            <h3 class="curation-step-title">Você vê o ambiente pronto antes da fabricação</h3>
             <p class="curation-step-text">O projeto em 3D mostra as suas escolhas aplicadas. Você pede ajustes e aprova. Antes de fabricar, as medidas são conferidas na obra: bancada, pontos de água e luz, piso, teto e aberturas.</p>
           </li>
           <li class="curation-step">
             <p class="curation-step-name">Acompanhamento</p>
-            <h3 class="curation-step-title">A Orvanno continua com você depois da montagem.</h3>
-            <p class="curation-step-text">Os móveis são produzidos na fábrica parceira, com processo industrial. A Orvanno acompanha a entrega e a montagem. O pós-venda é pelo WhatsApp, com garantia de 5 anos em contrato.</p>
+            <h3 class="curation-step-title">A Orvanno acompanha a entrega, a montagem e o pós-venda</h3>
+            <p class="curation-step-text">A fábrica parceira produz os móveis com processo industrial. A Orvanno acompanha a entrega e a montagem. Depois, o pós-venda é pelo WhatsApp, com garantia de 5 anos em contrato.</p>
           </li>
             </ol>
           </div>
@@ -348,8 +350,8 @@
     <section class="showcase seam" id="showcase">
       <div class="wrap">
         <div class="showcase-head">
-          <h2 class="section-title showcase-title">Ambientes que a Orvanno projeta</h2>
-          <p class="lead showcase-lead">Cada um desenhado a partir das medidas e da rotina de quem vai usar. Também projetamos cozinhas, closets e banheiros.</p>
+          <h2 class="section-title showcase-title">Ambientes <span class="title-turn">que a Orvanno projeta</span></h2>
+          <p class="lead showcase-lead">Cada ambiente é desenhado a partir das medidas e da rotina de quem vai usar. Além de quartos, projetamos cozinhas, closets e banheiros.</p>
         </div>
         <div class="showcase-gallery">
           <figure class="media showcase-feature">
@@ -367,12 +369,13 @@
             </figure>
           </div>
         </div>
+        <p class="showcase-more"><a href="https://www.instagram.com/orvannovr/">Ver mais projetos no Instagram</a></p>
       </div>
     </section>
 
     <section class="fit seam" id="fit">
       <div class="wrap">
-        <h2 class="section-title fit-title">Para quem a Orvanno faz sentido</h2>
+        <h2 class="section-title fit-title">Para quem <span class="title-turn">a Orvanno faz sentido</span></h2>
         <div class="fit-columns">
           <div class="fit-group">
             <h3 class="fit-group-title">Faz sentido se você:</h3>
@@ -399,19 +402,19 @@
 
     <section class="faq seam" id="faq">
       <div class="wrap">
-        <h2 class="section-title faq-title">Perguntas frequentes</h2>
+        <h2 class="section-title faq-title">Perguntas <span class="title-turn">frequentes</span></h2>
         <div class="faq-list">
           <details class="faq-item">
             <summary class="faq-question chevron">Dá para resolver tudo pelo WhatsApp?</summary>
-            <p class="faq-answer">O WhatsApp é o começo: lá você tira dúvidas e agenda a conversa na loja. O orçamento vem do projeto, e o projeto começa nessa conversa.</p>
+            <p class="faq-answer">Não. O WhatsApp serve para tirar dúvidas e marcar a conversa na loja. O orçamento sai do projeto, que começa nessa conversa.</p>
           </details>
           <details class="faq-item">
             <summary class="faq-question chevron">Vocês têm tabela de preços?</summary>
-            <p class="faq-answer">O preço depende da espessura do MDF, da cor, do tipo de ferragem e da complexidade de cada projeto. Por isso o orçamento é feito sob medida, como os móveis.</p>
+            <p class="faq-answer">O preço depende da espessura do MDF, da cor, do tipo de ferragem e da complexidade de cada projeto. Por isso não há tabela: o orçamento sai depois do projeto.</p>
           </details>
           <details class="faq-item">
             <summary class="faq-question chevron">Qual é o prazo de entrega?</summary>
-            <p class="faq-answer">O prazo fica escrito no contrato e conta a partir da aprovação do projeto. Você acompanha cada etapa com a Orvanno até a montagem.</p>
+            <p class="faq-answer">O prazo fica escrito no contrato e conta a partir da aprovação do projeto. A Orvanno acompanha cada etapa até a montagem para cumprir o que foi combinado.</p>
           </details>
           <details class="faq-item">
             <summary class="faq-question chevron">Como posso pagar?</summary>
@@ -451,31 +454,45 @@
       </div>
     </section>
 
-    <section class="cta seam tone-brown" id="cta">
+    <section class="cta seam tone-dark" id="cta">
       <div class="wrap cta-inner">
-        <h2 class="section-title cta-title">Móveis planejados para acompanhar a sua vida.</h2>
-        <p class="lead">Agende uma conversa na loja pelo WhatsApp.</p>
-        <a class="button button-lg" data-primary-action data-contact href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20gostaria%20de%20agendar%20um%20atendimento."><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Agendar atendimento</a>
+        <h2 class="section-title cta-title">Móveis planejados <span class="title-turn">para acompanhar a sua vida</span></h2>
+        <a class="button button-lg" data-primary-action data-contact href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20quero%20conversar%20com%20a%20especialista%20sobre%20o%20meu%20projeto."><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Falar com a especialista</a>
         <p class="cta-hours">Segunda a sexta, das 9h às 17h. Sábado com hora marcada.</p>
       </div>
     </section>
   </main>
 
-  <footer class="footer seam tone-dark">
+  <footer class="footer seam tone-brown">
     <div class="footer-inner wrap">
-      <p class="footer-tagline">Orvanno Planejados. Sofisticação inteligente.</p>
+      <div class="footer-brand">
+      <svg class="footer-logo" viewBox="0 0 1432.41 183" width="1432" height="183" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M92,0C41.19,0,0,40.97,0,91.5s41.19,91.5,92,91.5,92-40.97,92-91.5S142.81,0,92,0ZM92,170c-43.56,0-79-35.21-79-78.5S48.44,13,92,13s79,35.21,79,78.5-35.44,78.5-79,78.5Z"/>
+      <path d="M1340.41,0c-50.81,0-92,40.97-92,91.5s41.19,91.5,92,91.5,92-40.97,92-91.5S1391.22,0,1340.41,0ZM1340.41,170c-43.56,0-79-35.21-79-78.5s35.44-78.5,79-78.5,79,35.21,79,78.5-35.44,78.5-79,78.5Z"/>
+      <path d="M380.98,172.08l-39.02-51.83c23.34-8.64,40.03-31.27,40.03-57.76,0-33.91-27.36-61.5-61-61.5h-69c-3.87,0-7,3.13-7,7s3.13,7,7,7h69c25.92,0,47,21.31,47,47.5s-21.08,47.5-47,47.5h-74c-1.1,0-2,.9-2,2v65.2c0,1.1.9,2,2,2h9c1.1,0,2-.9,2-2v-53.2h63c2.43,0,4.83-.16,7.18-.44l33.62,44.66s0,0,0,0l6.79,9.02c.84,1.1,2.61,2,3.98,2l11.32-.04c1.36,0,1.79-.9.95-2l-3.86-5.12Z"/>
+      <path d="M771.73,169.91L699.76,8.96l-1.68-3.77-.5-1.12-.22-.48c-.32-.72-1.04-1.18-1.82-1.18h-13.73c-.78,0-1.49.46-1.82,1.17l-2.46,5.39h0l-71.05,155.41-4.54,9.93-.12.25-.83,1.81c-.61,1.33.36,2.84,1.82,2.84h9.88c.79,0,1.5-.46,1.82-1.18l1.55-3.47h.04L688.63,15.92l67.09,150.02,5.4,12.07c.32.72,1.04,1.18,1.83,1.18h9.86c1.45,0,2.41-1.49,1.82-2.81l-2.9-6.48Z"/>
+      <path d="M583.97,9.06l1.68-3.85c.58-1.32-.39-2.8-1.83-2.8h-9.82c-.8,0-1.52.47-1.83,1.2l-1.49,3.42-67.93,155.51L437.43,11.36h0,0s-1.26-2.92-1.26-2.92h0l-2.1-4.83c-.32-.73-1.04-1.2-1.84-1.2h-9.77c-1.44,0-2.41,1.47-1.84,2.8l1.4,3.24h0l70.87,164.06,2.37,5.49c.32.73,1.04,1.21,1.84,1.21h11.24c.8,0,1.52-.47,1.84-1.2l2.4-5.5L583.97,9.06Z"/>
+      <path d="M970.98,4.41c0-1.1-.9-2-2-2h-9c-1.1,0-2,.9-2,2v153.29L840.63,3.2c-.38-.5-.97-.79-1.59-.79h-11.63c-1.1,0-2,.9-2,2v172.79c0,1.1.9,2,2,2h9c1.1,0,2-.9,2-2V23.91l117.35,154.5c.38.5.97.79,1.59.79h11.63c1.1,0,2-.9,2-2V4.41Z"/>
+      <path d="M1195.43,4.41c0-1.1-.9-2-2-2h-9c-1.1,0-2,.9-2,2v153.29L1065.08,3.2c-.38-.5-.97-.79-1.59-.79h-11.63c-1.1,0-2,.9-2,2v172.79c0,1.1.9,2,2,2h9c1.1,0,2-.9,2-2V23.91l117.35,154.5c.38.5.97.79,1.59.79h11.63c1.1,0,2-.9,2-2V4.41Z"/>
+      </svg>
+      <p class="footer-tagline">Orvanno Planejados <span class="footer-slogan">Sofisticação inteligente</span></p>
+      </div>
+      <div class="footer-info">
       <address class="footer-address">
         R. São Pedro, 126, Niterói, Volta Redonda - RJ, 27283-790
       </address>
-      <p class="footer-hours">Segunda a sexta, 9h às 17h. Sábado sob agendamento prévio.</p>
+      <p class="footer-hours">Segunda a sexta, das 9h às 17h. Sábado com hora marcada.</p>
+      </div>
       <ul class="footer-links">
-        <li><a href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20gostaria%20de%20agendar%20um%20atendimento.">WhatsApp</a></li>
-        <li><a href="https://www.instagram.com/orvannovr/">Instagram</a></li>
-        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Orvanno%20Planejados%2C%20R.%20S%C3%A3o%20Pedro%2C%20126%2C%20Volta%20Redonda%20-%20RJ">Como chegar (Google Maps)</a></li>
-        <li>Avalie a Orvanno no Google <span class="provisional">[provisório]</span></li>
+        <li><a href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20quero%20conversar%20com%20a%20especialista%20sobre%20o%20meu%20projeto."><svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.6c0 3.5 2.9 6.4 6.4 6.4l1.1-1.7-2.1-1-1 .9a5 5 0 0 1-2.6-2.6l.9-1-1-2.1z"/></svg>WhatsApp</a></li>
+        <li><a href="https://www.instagram.com/orvannovr/"><svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6"/></svg>Instagram</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Orvanno%20Planejados%2C%20R.%20S%C3%A3o%20Pedro%2C%20126%2C%20Volta%20Redonda%20-%20RJ"><svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Como chegar (Google Maps)</a></li>
+        <li><svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.5l2.6 5.5 6 .6-4.5 4 1.3 5.9-5.4-3-5.4 3 1.3-5.9-4.5-4 6-.6z"/></svg>Avalie a Orvanno no Google <span class="provisional">[provisório]</span></li>
       </ul>
+      <div class="footer-bottom">
       <p class="footer-legal">CNPJ 57.155.902/0001-14</p>
       <p class="footer-legal"><a href="privacidade.html">Política de privacidade</a></p>
+      </div>
     </div>
   </footer>
 
@@ -621,7 +638,7 @@
   <dialog class="contact-dialog tone-dark" id="contact-dialog" aria-labelledby="contact-title">
     <div class="contact-inner">
       <header class="contact-head">
-        <h2 class="contact-title" id="contact-title">Agendar atendimento</h2>
+        <h2 class="contact-title" id="contact-title">Falar com a especialista</h2>
         <button class="finishes-close" type="button" data-dialog-close>Fechar</button>
       </header>
       <div class="contact-body">
@@ -674,7 +691,7 @@
   </dialog>
 
   <div class="sticky-action">
-    <a class="button" data-contact href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20gostaria%20de%20agendar%20um%20atendimento."><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Agendar atendimento</a>
+    <a class="button" data-contact href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20quero%20conversar%20com%20a%20especialista%20sobre%20o%20meu%20projeto."><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Falar com a especialista</a>
   </div>
 
 </body>

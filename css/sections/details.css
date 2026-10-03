@@ -2,7 +2,8 @@
   margin-bottom: var(--space-xs);
   color: rgb(var(--heading));
   font-family: var(--font-heading);
-  font-size: 1.75rem;
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 
 .details-group-note {
@@ -49,7 +50,7 @@
 .details-swatch figcaption {
   padding-top: 0.625rem;
   color: rgb(var(--text));
-  font-size: 0.75rem;
+  font-size: var(--text-label);
   letter-spacing: 0.02em;
   line-height: 1.35;
 }

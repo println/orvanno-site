@@ -1,6 +1,6 @@
 .eyebrow {
   color: rgb(var(--accent-text));
-  font-size: 0.6875rem;
+  font-size: var(--text-label);
   font-weight: 400;
   letter-spacing: 0.32em;
   text-transform: uppercase;

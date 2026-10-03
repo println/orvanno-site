@@ -40,10 +40,10 @@
   bottom: 0;
   left: 0;
   padding: 3rem var(--space-m) var(--space-m);
-  background: linear-gradient(to top, rgba(38, 38, 35, 0.78), transparent);
-  color: rgb(247, 240, 228);
-  font-size: 0.6875rem;
-  letter-spacing: 0.18em;
+  background: linear-gradient(to top, rgba(var(--heading), 0.88), transparent);
+  color: rgb(var(--on-primary));
+  font-size: var(--text-label);
+  letter-spacing: 0.16em;
   line-height: 1.4;
   text-transform: uppercase;
 }
@@ -80,4 +80,25 @@
   .showcase-caption {
     padding: 4rem var(--space-l) var(--space-l);
   }
+}
+
+/* mesmo traço do "Ver todos os acabamentos" */
+.showcase-more {
+  margin: var(--space-l) 0 0;
+}
+
+.showcase-more a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  border-bottom: 1px solid rgb(var(--accent));
+  color: rgb(var(--heading));
+  font-size: var(--text-button);
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.showcase-more a:hover {
+  color: rgb(var(--accent-text));
 }

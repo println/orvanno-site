@@ -1,11 +1,24 @@
 @media (prefers-reduced-motion: no-preference) {
-  main > section:not(.hero, .intro) > .wrap,
-  .footer > .wrap {
-    transition: opacity 900ms cubic-bezier(0.2, 0.7, 0.2, 1), transform 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  .reveal {
+    transition:
+      opacity 800ms cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0ms),
+      transform 800ms cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0ms);
   }
 
-  .is-pending > .wrap {
+  .reveal.is-pending {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(1.5rem);
+  }
+
+  .reveal-media {
+    overflow: hidden;
+  }
+
+  .reveal-media img {
+    transition: transform 1400ms cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0ms);
+  }
+
+  .reveal-media.is-pending img {
+    transform: scale(1.06);
   }
 }

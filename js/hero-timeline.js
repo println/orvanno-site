@@ -1,4 +1,7 @@
 const DWELL = 6000;
+const RESUME = 10000;
+const LOOP_PAUSE = 12000;
+const LEAVE = 1700;
 
 function setup() {
   const hero = document.querySelector(".hero");
@@ -9,10 +12,10 @@ function setup() {
   const stops = [...timeline.querySelectorAll(".hero-stop")];
   const moments = [...hero.querySelectorAll(".hero-moment")];
   const persona = hero.querySelector(".hero-persona");
-  const pause = timeline.querySelector(".hero-pause");
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const state = { index: 0, taken: reduced.matches, userPaused: false, visible: true, timer: null };
+  const state = { index: 0, taken: reduced.matches, held: false, visible: true, timer: null, hold: null };
 
+  hero.style.setProperty("--count", slides.length);
   timeline.hidden = false;
 
   function load(slide) {
@@ -28,11 +31,19 @@ function setup() {
     const slide = slides[index];
     await load(slide);
     state.index = index;
+    const previous = slides.find((other) => other.classList.contains("is-active"));
     slides.forEach((other, i) => {
+      other.classList.remove("is-leaving");
       other.classList.toggle("is-active", i === index);
       other.toggleAttribute("aria-hidden", i !== index);
     });
+    if (previous && previous !== slide) {
+      previous.classList.add("is-leaving");
+      clearTimeout(state.leave);
+      state.leave = setTimeout(() => previous.classList.remove("is-leaving"), LEAVE);
+    }
     stops.forEach((stop, i) => stop.setAttribute("aria-pressed", String(i === index)));
+    hero.style.setProperty("--step", index);
     const list = timeline.querySelector(".hero-stops");
     const active = stops[index].parentElement;
     list.scrollTo({ left: active.offsetLeft - (list.clientWidth - active.offsetWidth) / 2, behavior: "smooth" });
@@ -41,7 +52,7 @@ function setup() {
   }
 
   function running() {
-    return !state.taken && !state.userPaused && state.visible && !document.hidden;
+    return !state.taken && !state.held && state.visible && !document.hidden;
   }
 
   function schedule() {
@@ -52,9 +63,7 @@ function setup() {
       const next = state.index + 1;
       if (next >= slides.length) {
         await show(0);
-        state.taken = true;
-        pause.hidden = true;
-        schedule();
+        hold(LOOP_PAUSE);
         return;
       }
       await show(next);
@@ -70,10 +79,19 @@ function setup() {
   }
 
   function takeOver() {
-    if (state.taken) return;
-    state.taken = true;
-    pause.hidden = true;
     persona.setAttribute("aria-live", "polite");
+    if (state.taken) return;
+    hold(RESUME);
+  }
+
+  function hold(duration) {
+    state.held = true;
+    clearTimeout(state.hold);
+    state.hold = setTimeout(() => {
+      state.held = false;
+      restartFill();
+      schedule();
+    }, duration);
     schedule();
   }
 
@@ -82,13 +100,6 @@ function setup() {
       takeOver();
       show(i);
     });
-  });
-
-  pause.addEventListener("click", () => {
-    state.userPaused = !state.userPaused;
-    pause.setAttribute("aria-pressed", String(state.userPaused));
-    pause.setAttribute("aria-label", state.userPaused ? "Retomar a troca de momentos" : "Pausar a troca de momentos");
-    schedule();
   });
 
   let start = null;
@@ -115,14 +126,9 @@ function setup() {
 
   document.addEventListener("visibilitychange", schedule);
 
-  if (state.taken) {
-    pause.hidden = true;
-    return;
-  }
-
   const begin = () => {
-    load(slides[1]);
-    schedule();
+    slides.slice(1).reduce((chain, slide) => chain.then(() => load(slide)), Promise.resolve());
+    if (!state.taken) schedule();
   };
   if (document.readyState === "complete") begin();
   else window.addEventListener("load", begin, { once: true });

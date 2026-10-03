@@ -1,5 +1,5 @@
 function message(data) {
-  const lines = ["Olá! Vim pelo site da Orvanno e gostaria de agendar um atendimento.", ""];
+  const lines = ["Olá! Vim pelo site da Orvanno e quero conversar com a especialista sobre o meu projeto.", ""];
   lines.push(`Nome: ${data.get("name").trim()}`);
   lines.push(`Ambiente: ${data.get("room")}`);
   const neighborhood = (data.get("neighborhood") || "").trim();
