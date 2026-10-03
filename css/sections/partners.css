@@ -112,6 +112,6 @@ main > .partners {
   color: rgb(var(--accent-text));
 }
 
-.partner a::after {
+.partner a[target="_blank"]::after {
   content: none;
 }
