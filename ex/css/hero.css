@@ -55,8 +55,8 @@ body {
   z-index: 10;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 3rem;
+  justify-content: center;
+  height: 4rem;
   padding-inline: var(--space-m);
   background: rgb(244, 241, 235);
 }
@@ -74,12 +74,25 @@ body {
 .topbar-logo {
   display: block;
   width: auto;
-  height: 1.25rem;
+  height: 1.7rem;
   color: rgb(var(--bg));
 }
 
 .topbar-cta {
   display: none;
+}
+
+.hero .button {
+  border: 1px solid rgba(var(--heading), 0.55);
+  background: transparent;
+  color: rgb(var(--heading));
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.hero .button:hover {
+  border-color: rgb(var(--heading));
+  background: rgba(var(--heading), 0.08);
 }
 
 .hero-main {
@@ -95,15 +108,6 @@ body {
 
 .hero-intro {
   margin-top: var(--space-s);
-}
-
-.hero-eyebrow {
-  margin: 0 0 var(--space-s);
-  color: rgb(var(--accent-text));
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
 }
 
 .hero-title {
@@ -335,18 +339,6 @@ body {
   color: rgb(var(--heading));
 }
 
-.hero-lead {
-  max-width: var(--reading-width);
-  margin-top: var(--space-l);
-  margin-bottom: var(--space-m);
-}
-
-.hero-note {
-  margin: var(--space-s) auto 0;
-  color: rgb(var(--muted));
-  font-size: 0.875rem;
-}
-
 .cta-bar {
   position: fixed;
   right: 0;
@@ -411,7 +403,7 @@ body {
 
 @media (min-width: 64em) {
   .hero {
-    padding-top: 4.5rem;
+    padding-top: 5.25rem;
     padding-bottom: 0;
   }
 
@@ -419,23 +411,19 @@ body {
     position: fixed;
     inset: 0 0 auto;
     z-index: 10;
-    height: 4.5rem;
+    height: 5.25rem;
     padding-inline: var(--gutter);
     background: rgb(244, 241, 235);
   }
 
   .topbar-logo {
-    height: 1.5rem;
-  }
-
-  .topbar-cta {
-    display: inline-flex;
+    height: 2rem;
   }
 
   .hero-main {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-template-rows: 1fr repeat(5, auto) 1fr auto;
+    grid-template-rows: 1fr repeat(3, auto) 1fr auto;
     padding-left: var(--gutter);
   }
 
@@ -446,9 +434,7 @@ body {
 
   .hero-intro,
   .persona,
-  .hero-lead,
-  .cta-bar,
-  .hero-note {
+  .cta-bar {
     grid-column: 1 / 6;
     padding-right: var(--space-l);
   }
@@ -463,14 +449,10 @@ body {
     margin-top: var(--space-l);
   }
 
-  .hero-lead {
-    grid-row: 4;
-    margin: var(--space-l) 0 var(--space-m);
-  }
-
   .cta-bar {
     position: static;
-    grid-row: 5;
+    grid-row: 4;
+    margin-top: var(--space-l);
     padding-block: 0;
     border-top: 0;
     background: none;
@@ -481,18 +463,13 @@ body {
     width: auto;
   }
 
-  .hero-note {
-    grid-row: 6;
-    margin: var(--space-s) 0 0;
-  }
-
   .hero-title {
     font-size: clamp(2.4rem, 3.4vw, 3.35rem);
   }
 
   .hero-scene {
     grid-column: 6 / 13;
-    grid-row: 1 / 8;
+    grid-row: 1 / 6;
     width: auto;
     height: min(calc(100svh - 9.5rem), 52rem);
     margin-top: 0;
@@ -508,13 +485,13 @@ body {
 
   .timeline {
     grid-column: 1 / 7;
-    grid-row: 8;
+    grid-row: 6;
     margin: var(--space-s) var(--space-l) 0 0;
   }
 
   .chips {
     grid-column: 7 / 13;
-    grid-row: 8;
+    grid-row: 6;
     align-content: start;
     justify-content: flex-end;
     margin: var(--space-s) var(--gutter) 0 0;
