@@ -1,14 +1,47 @@
 .fit-columns {
   display: grid;
-  gap: var(--space-l);
-  margin-bottom: var(--space-l);
+  gap: var(--space-xl) var(--space-2xl);
+  margin-bottom: var(--space-xl);
+}
+
+.fit-group {
+  padding-top: var(--space-m);
+  border-top: 1px solid rgb(var(--line));
+}
+
+.fit-group:first-child {
+  border-top-color: rgb(var(--accent));
+}
+
+.fit-group-title {
+  margin-bottom: var(--space-m);
 }
 
 .fit-list {
   display: grid;
-  gap: var(--space-xs);
-  margin-bottom: 0;
-  padding-left: var(--space-m);
+  gap: var(--space-s);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fit-list li {
+  position: relative;
+  padding-left: var(--space-l);
+}
+
+.fit-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.8em;
+  left: 0;
+  width: 0.75rem;
+  height: 2px;
+  background: rgb(var(--secondary));
+}
+
+.fit-group:first-child .fit-list li::before {
+  background: rgb(var(--accent));
 }
 
 @media (min-width: 40em) {

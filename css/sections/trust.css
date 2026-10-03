@@ -1,18 +1,22 @@
 .trust {
+  padding-block: var(--space-l);
   background: rgb(var(--bg-raised));
+  border-bottom: 1px solid rgb(var(--line));
 }
 
 .trust-list {
   display: grid;
-  gap: var(--space-m);
+  gap: var(--space-m) var(--space-l);
   margin-bottom: 0;
   list-style: none;
 }
 
 .trust-item {
   padding-left: var(--space-m);
-  border-left: 2px solid rgb(var(--primary));
-  font-weight: 600;
+  border-left: 2px solid rgb(var(--accent));
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 @media (min-width: 40em) {

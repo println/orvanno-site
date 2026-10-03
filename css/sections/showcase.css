@@ -5,9 +5,12 @@
 .showcase-tabs {
   display: flex;
   gap: var(--space-s);
+  margin: 0 0 var(--space-l);
   padding: 0 0 var(--space-s);
   overflow-x: auto;
   list-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--line)) transparent;
 }
 
 .showcase-tab {
@@ -17,26 +20,50 @@
   padding: var(--space-s) var(--space-m);
   border: 1px solid rgb(var(--line));
   border-radius: var(--radius);
+  color: rgb(var(--text));
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
   white-space: nowrap;
+}
+
+.showcase-tab:hover {
+  border-color: rgb(var(--accent));
+  color: rgb(var(--accent-text));
 }
 
 .showcase-panels {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 100%;
+  grid-auto-columns: 86%;
   gap: var(--space-m);
+  padding-bottom: var(--space-s);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--line)) transparent;
 }
 
 .showcase-panel {
   scroll-snap-align: start;
 }
 
+.showcase-panel-title {
+  margin-bottom: var(--space-s);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .showcase-tab {
+    transition: color 200ms, border-color 200ms;
+  }
+}
+
 @media (min-width: 64em) {
   .showcase-panels {
     grid-auto-flow: row;
     grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-l) var(--space-m);
+    padding-bottom: 0;
     overflow-x: visible;
   }
 }

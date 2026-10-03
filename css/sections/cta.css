@@ -1,22 +1,60 @@
+.cta > .wrap {
+  display: grid;
+  align-content: start;
+}
+
+.cta-title {
+  margin-bottom: var(--space-m);
+}
+
+@supports (background-clip: text) {
+  .cta-title {
+    background: var(--gradient);
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.cta .button {
+  justify-self: start;
+}
+
 .cta-hours {
-  margin-top: var(--space-s);
+  margin-top: var(--space-m);
   color: rgb(var(--muted));
 }
 
 .cta-form {
+  position: relative;
   display: grid;
   gap: var(--space-m);
   max-width: 36rem;
-  margin-top: var(--space-l);
-  padding: var(--space-m);
+  margin-top: var(--space-xl);
+  padding: var(--space-l) var(--space-m);
   border: 1px solid rgb(var(--line));
   border-radius: var(--radius);
   background: rgb(var(--surface-lit));
 }
 
+.cta-form::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  width: 2px;
+  border-radius: var(--radius) 0 0 var(--radius);
+  background: rgb(var(--accent));
+  box-shadow: 0 0 6px rgba(var(--accent), 0.3);
+}
+
 .cta-form-title {
   margin-bottom: 0;
   color: rgb(var(--text));
+}
+
+.cta-form > p {
+  margin: 0;
 }
 
 .cta-step {
@@ -54,6 +92,10 @@
   background: rgb(var(--bg));
 }
 
+.cta-input:focus-visible {
+  border-color: rgb(var(--accent-text));
+}
+
 .cta-choice {
   display: flex;
   flex-wrap: wrap;
@@ -73,6 +115,11 @@
   align-items: center;
   gap: var(--space-s);
   min-height: 2.75rem;
+}
+
+.cta-form input[type="radio"],
+.cta-form input[type="checkbox"] {
+  accent-color: rgb(var(--primary));
 }
 
 .cta-consent {
@@ -97,4 +144,31 @@
   margin: 0;
   color: rgb(var(--text));
   font-size: 0.875rem;
+}
+
+@media (min-width: 40em) {
+  .cta-form {
+    padding: var(--space-l);
+  }
+}
+
+@media (min-width: 64em) {
+  .cta > .wrap {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 36rem);
+    grid-template-rows: auto auto auto 1fr;
+    column-gap: var(--space-2xl);
+  }
+
+  .cta-title,
+  .cta .lead,
+  .cta .button,
+  .cta-hours {
+    grid-column: 1;
+  }
+
+  .cta-form {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    margin-top: 0;
+  }
 }

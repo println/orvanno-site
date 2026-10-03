@@ -1,13 +1,16 @@
+:root {
+  --wrap-pad: var(--space-m);
+}
+
 .wrap {
   width: 100%;
   max-width: var(--width-max);
   margin-inline: auto;
-  padding-inline: var(--space-m);
+  padding-inline: var(--wrap-pad);
 }
 
 main > section {
   padding-block: var(--space-xl);
-  border-bottom: 1px solid rgb(var(--line));
 }
 
 .skip-link {
@@ -25,8 +28,8 @@ main > section {
 }
 
 @media (min-width: 40em) {
-  .wrap {
-    padding-inline: var(--space-l);
+  :root {
+    --wrap-pad: var(--space-l);
   }
 
   main > section {

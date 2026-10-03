@@ -6,7 +6,9 @@
   color: rgb(var(--bg));
   font-size: 0.75rem;
   font-weight: 600;
+  letter-spacing: normal;
   line-height: 1.5;
+  text-transform: none;
   vertical-align: middle;
   white-space: nowrap;
 }

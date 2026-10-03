@@ -14,6 +14,11 @@
   <link rel="stylesheet" href="css/components/icon-sprite.css">
   <link rel="stylesheet" href="css/components/placeholder.css">
   <link rel="stylesheet" href="css/components/provisional.css">
+  <link rel="stylesheet" href="css/components/seam.css">
+  <link rel="stylesheet" href="css/components/reveal.css">
+  <link rel="stylesheet" href="css/components/lead.css">
+  <link rel="stylesheet" href="css/components/eyebrow.css">
+  <link rel="stylesheet" href="css/components/chevron.css">
   <link rel="stylesheet" href="css/sections/nav.css">
   <link rel="stylesheet" href="css/sections/hero.css">
   <link rel="stylesheet" href="css/sections/trust.css">
@@ -28,6 +33,7 @@
   <link rel="stylesheet" href="css/sections/faq.css">
   <link rel="stylesheet" href="css/sections/cta.css">
   <link rel="stylesheet" href="css/sections/footer.css">
+  <script type="module" src="js/reveal.js"></script>
 </head>
 <body>
   <svg class="icon-sprite" aria-hidden="true" focusable="false">
@@ -83,7 +89,7 @@
       </div>
     </section>
 
-    <section class="trust" id="trust" aria-label="Credibilidade">
+    <section class="trust seam" id="trust" aria-label="Credibilidade">
       <ul class="trust-list wrap">
         <li class="trust-item">5,0 no Google, com 23 avaliações</li>
         <li class="trust-item">Projeto feito por arquiteta e urbanista</li>
@@ -95,7 +101,7 @@
     <section class="scene" id="scene">
       <div class="wrap">
         <h2 class="scene-title">Um móvel, um papel para cada momento do dia</h2>
-        <p>O projeto parte da sua rotina: alturas, acessos e circulação pensados para quem usa o ambiente.</p>
+        <p class="lead">O projeto parte da sua rotina: alturas, acessos e circulação pensados para quem usa o ambiente.</p>
         <ol class="scene-moments">
           <li class="scene-moment">
             <div class="placeholder placeholder-4-5">a cozinha organiza · 4:5</div>
@@ -121,7 +127,7 @@
       </div>
     </section>
 
-    <section class="benefits" id="benefits">
+    <section class="benefits seam" id="benefits">
       <div class="wrap">
         <h2 class="benefits-title">Por que planejar com a Orvanno</h2>
         <ul class="benefits-list">
@@ -145,10 +151,10 @@
       </div>
     </section>
 
-    <section class="showcase" id="showcase">
+    <section class="showcase seam" id="showcase">
       <div class="wrap">
         <h2 class="showcase-title">Ambientes que a Orvanno projeta</h2>
-        <p>Cada um desenhado a partir das medidas e da rotina de quem vai usar.</p>
+        <p class="lead">Cada um desenhado a partir das medidas e da rotina de quem vai usar.</p>
         <ul class="showcase-tabs">
           <li><a class="showcase-tab" href="#showcase-kitchen">Cozinha</a></li>
           <li><a class="showcase-tab" href="#showcase-closet">Closet</a></li>
@@ -186,15 +192,15 @@
       </div>
     </section>
 
-    <section class="details" id="details">
+    <section class="details seam" id="details">
       <div class="wrap">
         <h2 class="details-title">Cores, texturas e puxadores</h2>
-        <p>Uma seleção para começar. A escolha final é feita com a arquiteta, pelo uso e pelo estilo de cada ambiente.</p>
+        <p class="lead">Uma seleção para começar. A escolha final é feita com a arquiteta, pelo uso e pelo estilo de cada ambiente.</p>
 
         <div class="details-group">
-          <h3>Padrões</h3>
-          <p>Madeiras, pedras e cores lisas.</p>
-          <ul class="details-swatches">
+          <h3 class="details-group-title">Padrões</h3>
+          <p class="details-group-note">Madeiras, pedras e cores lisas.</p>
+          <ul class="details-swatches details-swatches-featured details-swatches-strip">
             <li><figure class="details-swatch"><img src="img/revestimentos/madeira/freijo.webp" alt="Amostra do revestimento Freijó" width="250" height="329" loading="lazy"><figcaption>Freijó</figcaption></figure></li>
             <li><figure class="details-swatch"><img src="img/revestimentos/madeira/noce.webp" alt="Amostra do revestimento Noce" width="250" height="329" loading="lazy"><figcaption>Noce</figcaption></figure></li>
             <li><figure class="details-swatch"><img src="img/revestimentos/madeira/carvalho.webp" alt="Amostra do revestimento Carvalho" width="350" height="460" loading="lazy"><figcaption>Carvalho</figcaption></figure></li>
@@ -205,9 +211,9 @@
             <li><figure class="details-swatch"><img src="img/revestimentos/unicolor/ebano.webp" alt="Amostra do revestimento Ébano" width="250" height="329" loading="lazy"><figcaption>Ébano</figcaption></figure></li>
           </ul>
           <details class="details-item">
-            <summary class="details-summary">Ver todos os padrões</summary>
+            <summary class="details-summary chevron">Ver todos os padrões</summary>
             <div class="details-panel">
-            <h4 class="details-line">Unicolor</h4>
+            <h4 class="details-line eyebrow">Unicolor</h4>
             <ul class="details-swatches">
               <li><figure class="details-swatch"><img src="img/revestimentos/unicolor/avela.webp" alt="Amostra do revestimento Avelã" width="350" height="460" loading="lazy"><figcaption>Avelã</figcaption></figure></li>
               <li><figure class="details-swatch"><img src="img/revestimentos/unicolor/azul.webp" alt="Amostra do revestimento Azul" width="350" height="460" loading="lazy"><figcaption>Azul</figcaption></figure></li>
@@ -228,12 +234,12 @@
               <li><figure class="details-swatch"><img src="img/revestimentos/unicolor/tabaco.webp" alt="Amostra do revestimento Tabaco" width="350" height="460" loading="lazy"><figcaption>Tabaco</figcaption></figure></li>
               <li><figure class="details-swatch"><img src="img/revestimentos/unicolor/tijolo.webp" alt="Amostra do revestimento Tijolo" width="350" height="460" loading="lazy"><figcaption>Tijolo</figcaption></figure></li>
             </ul>
-            <h4 class="details-line">Brilho</h4>
+            <h4 class="details-line eyebrow">Brilho</h4>
             <ul class="details-swatches">
               <li><figure class="details-swatch"><img src="img/revestimentos/brilho/branco-brilho.webp" alt="Amostra do revestimento Branco Brilho" width="250" height="328" loading="lazy"><figcaption>Branco Brilho</figcaption></figure></li>
               <li><figure class="details-swatch"><img src="img/revestimentos/brilho/taupe-brilho.webp" alt="Amostra do revestimento Taupe Brilho" width="250" height="329" loading="lazy"><figcaption>Taupe Brilho</figcaption></figure></li>
             </ul>
-            <h4 class="details-line">Madeira</h4>
+            <h4 class="details-line eyebrow">Madeira</h4>
             <ul class="details-swatches">
               <li><figure class="details-swatch"><img src="img/revestimentos/madeira/amendola.webp" alt="Amostra do revestimento Amêndola" width="350" height="459" loading="lazy"><figcaption>Amêndola</figcaption></figure></li>
               <li><figure class="details-swatch"><img src="img/revestimentos/madeira/bambu.webp" alt="Amostra do revestimento Bambu" width="350" height="460" loading="lazy"><figcaption>Bambu</figcaption></figure></li>
@@ -246,9 +252,9 @@
         </div>
 
         <div class="details-group">
-          <h3>Puxadores</h3>
-          <p>Do perfil embutido, que deixa a frente lisa, às peças aparentes em bronze e ouro fosco.</p>
-          <ul class="details-swatches">
+          <h3 class="details-group-title">Puxadores</h3>
+          <p class="details-group-note">Do perfil embutido, que deixa a frente lisa, às peças aparentes em bronze e ouro fosco.</p>
+          <ul class="details-swatches details-swatches-featured">
             <li><figure class="details-swatch details-swatch-square"><img src="img/puxadores/lineares/cava-preto-com-ou-sem-fita-linear.webp" alt="Puxador Cava, Preto" width="320" height="320" loading="lazy"><figcaption>Cava<span>Preto</span></figcaption></figure></li>
             <li><figure class="details-swatch details-swatch-square"><img src="img/puxadores/lineares/gola-bronze-linear.webp" alt="Puxador Gola, Bronze" width="160" height="160" loading="lazy"><figcaption>Gola<span>Bronze</span></figcaption></figure></li>
             <li><figure class="details-swatch details-swatch-square"><img src="img/puxadores/lineares/kos.webp" alt="Puxador Kos, Prata" width="160" height="160" loading="lazy"><figcaption>Kos<span>Prata</span></figcaption></figure></li>
@@ -259,16 +265,16 @@
             <li><figure class="details-swatch details-swatch-square"><img src="img/puxadores/unitarios/orbita-ouro-fosco-35mm.webp" alt="Puxador Órbita, Ouro Fosco" width="320" height="320" loading="lazy"><figcaption>Órbita<span>Ouro Fosco</span></figcaption></figure></li>
           </ul>
           <details class="details-item">
-            <summary class="details-summary">Ver todos os puxadores</summary>
+            <summary class="details-summary chevron">Ver todos os puxadores</summary>
             <div class="details-panel">
-            <h4 class="details-line">Lineares</h4>
+            <h4 class="details-line eyebrow">Lineares</h4>
             <ul class="details-swatches">
               <li><figure class="details-swatch details-swatch-square"><img src="img/puxadores/lineares/cava.webp" alt="Puxador Cava, Bronze (com ou sem fita)" width="160" height="160" loading="lazy"><figcaption>Cava<span>Bronze (com ou sem fita)</span></figcaption></figure></li>
               <li><figure class="details-swatch details-swatch-square"><img src="img/puxadores/lineares/cava-prata-com-ou-sem-fita-linear.webp" alt="Puxador Cava, Prata (com ou sem fita)" width="160" height="160" loading="lazy"><figcaption>Cava<span>Prata (com ou sem fita)</span></figcaption></figure></li>
               <li><figure class="details-swatch details-swatch-square"><img src="img/puxadores/lineares/cava-branco-com-ou-sem-fita-linear.webp" alt="Puxador Cava, Branco (com ou sem fita)" width="320" height="320" loading="lazy"><figcaption>Cava<span>Branco (com ou sem fita)</span></figcaption></figure></li>
               <li><figure class="details-swatch details-swatch-square"><img src="img/puxadores/lineares/gola.webp" alt="Puxador Gola, Prata" width="160" height="160" loading="lazy"><figcaption>Gola<span>Prata</span></figcaption></figure></li>
             </ul>
-            <h4 class="details-line">Unitários</h4>
+            <h4 class="details-line eyebrow">Unitários</h4>
             <ul class="details-swatches">
               <li><figure class="details-swatch details-swatch-square"><img src="img/puxadores/unitarios/alca.webp" alt="Puxador Alça, Escovado" width="160" height="160" loading="lazy"><figcaption>Alça<span>Escovado</span></figcaption></figure></li>
               <li><figure class="details-swatch details-swatch-square"><img src="img/puxadores/unitarios/arco.webp" alt="Puxador Arco, Ouro Velho" width="160" height="160" loading="lazy"><figcaption>Arco<span>Ouro Velho</span></figcaption></figure></li>
@@ -325,7 +331,7 @@
     <section class="process" id="process">
       <div class="wrap">
         <h2 class="process-title">Da primeira conversa ao pós-venda</h2>
-        <p>Você aprova o projeto em 3D antes de qualquer peça ir para a fábrica.</p>
+        <p class="lead">Você aprova o projeto em 3D antes de qualquer peça ir para a fábrica.</p>
         <ol class="process-steps">
           <li class="process-step">
             <h3 class="process-step-title">Conversa na loja.</h3>
@@ -359,7 +365,7 @@
       </div>
     </section>
 
-    <section class="expert" id="expert">
+    <section class="expert seam" id="expert">
       <div class="expert-inner wrap">
         <div class="placeholder placeholder-4-5 expert-portrait">retrato da Iris · 4:5</div>
         <div class="expert-text">
@@ -375,7 +381,7 @@
     <section class="partners" id="partners">
       <div class="wrap">
         <h2 class="partners-title">Parceiros <span class="provisional">[provisório]</span></h2>
-        <p>Profissionais e empresas que trabalham com a Orvanno.</p>
+        <p class="lead">Profissionais e empresas que trabalham com a Orvanno.</p>
         <ul class="partners-list">
           <li class="partners-item">MDE Arquitetura</li>
           <li class="partners-item">Arq. Janaína Ferreira</li>
@@ -387,10 +393,10 @@
       </div>
     </section>
 
-    <section class="fit" id="fit">
+    <section class="fit seam" id="fit">
       <div class="wrap">
         <h2 class="fit-title">Para quem a Orvanno faz sentido</h2>
-        <p>Cada projeto começa numa conversa na loja e passa por medição e aprovação em 3D antes de ir para a fábrica.</p>
+        <p class="lead">Cada projeto começa numa conversa na loja e passa por medição e aprovação em 3D antes de ir para a fábrica.</p>
         <div class="fit-columns">
           <div class="fit-group">
             <h3 class="fit-group-title">Faz sentido se você:</h3>
@@ -412,59 +418,59 @@
             </ul>
           </div>
         </div>
-        <a class="button" href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20gostaria%20de%20agendar%20um%20atendimento.">Agendar atendimento</a>
+        <a class="button" href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20gostaria%20de%20agendar%20um%20atendimento."><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Agendar atendimento</a>
       </div>
     </section>
 
-    <section class="faq" id="faq">
+    <section class="faq seam" id="faq">
       <div class="wrap">
         <h2 class="faq-title">Perguntas frequentes</h2>
         <div class="faq-list">
           <details class="faq-item">
-            <summary class="faq-question">Dá para resolver tudo pelo WhatsApp?</summary>
+            <summary class="faq-question chevron">Dá para resolver tudo pelo WhatsApp?</summary>
             <p class="faq-answer">O WhatsApp é o começo: lá você tira dúvidas e agenda a conversa na loja. O orçamento vem do projeto, e o projeto começa nessa conversa.</p>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Vocês têm tabela de preços?</summary>
+            <summary class="faq-question chevron">Vocês têm tabela de preços?</summary>
             <p class="faq-answer">O preço depende da espessura do MDF, da cor, do tipo de ferragem e da complexidade de cada projeto. Por isso o orçamento é feito sob medida, como os móveis.</p>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Qual é o prazo de entrega?</summary>
+            <summary class="faq-question chevron">Qual é o prazo de entrega?</summary>
             <p class="faq-answer">O prazo fica escrito no contrato e conta a partir da aprovação do projeto. Você acompanha cada etapa com a Orvanno até a montagem.</p>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Qual é a garantia?</summary>
+            <summary class="faq-question chevron">Qual é a garantia?</summary>
             <p class="faq-answer">5 anos, nas condições do contrato.</p>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Como posso pagar?</summary>
+            <summary class="faq-question chevron">Como posso pagar?</summary>
             <p class="faq-answer">Pix, boleto ou cartão, com opção de parcelar no cartão.</p>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Quais cidades vocês atendem?</summary>
+            <summary class="faq-question chevron">Quais cidades vocês atendem?</summary>
             <p class="faq-answer">Volta Redonda, Barra Mansa e Pinheiral.</p>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Quem fabrica os móveis?</summary>
+            <summary class="faq-question chevron">Quem fabrica os móveis?</summary>
             <p class="faq-answer">Uma fábrica parceira, com produção industrial. A Orvanno faz o projeto e acompanha a medição, a entrega, a montagem e o pós-venda.</p>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Posso escolher cores e puxadores?</summary>
+            <summary class="faq-question chevron">Posso escolher cores e puxadores?</summary>
             <p class="faq-answer">Sim. Acima há uma seleção e, logo abaixo dela, todas as opções. A escolha final é feita com a arquiteta, pelo uso e pelo estilo de cada ambiente.</p>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">E se der algum problema depois da montagem?</summary>
+            <summary class="faq-question chevron">E se der algum problema depois da montagem?</summary>
             <p class="faq-answer">Você fala com a Orvanno pelo WhatsApp, que é o canal do pós-venda. A garantia é de 5 anos, nas condições do contrato.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <section class="cta" id="cta">
+    <section class="cta seam" id="cta">
       <div class="wrap">
         <h2 class="cta-title">Móveis planejados para acompanhar a sua vida.</h2>
-        <p>Agende uma conversa na loja pelo WhatsApp.</p>
-        <a class="button" href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20gostaria%20de%20agendar%20um%20atendimento.">Agendar atendimento</a>
+        <p class="lead">Agende uma conversa na loja pelo WhatsApp.</p>
+        <a class="button" href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20gostaria%20de%20agendar%20um%20atendimento."><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Agendar atendimento</a>
         <p class="cta-hours">Segunda a sexta, das 9h às 17h. Sábado com hora marcada.</p>
 
         <form class="cta-form" method="post" aria-labelledby="cta-form-title">
@@ -531,7 +537,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer seam">
     <div class="footer-inner wrap">
       <p class="footer-tagline">Orvanno Planejados. Você merece o alto padrão.</p>
       <address class="footer-address">
