@@ -81,8 +81,10 @@
     grid-row: span 2;
   }
 
-  .showcase-panel:first-child .placeholder {
+  .showcase-panel:first-child .media {
     flex: 1;
+    height: 0;
+    min-height: 0;
     aspect-ratio: auto;
   }
 }

@@ -37,6 +37,8 @@
   <link rel="stylesheet" href="css/components/button.css">
   <link rel="stylesheet" href="css/components/icon-sprite.css">
   <link rel="stylesheet" href="css/components/placeholder.css">
+  <link rel="stylesheet" href="css/components/media.css">
+  <link rel="stylesheet" href="css/components/image-note.css">
   <link rel="stylesheet" href="css/components/provisional.css">
   <link rel="stylesheet" href="css/components/seam.css">
   <link rel="stylesheet" href="css/components/reveal.css">
@@ -61,6 +63,7 @@
   <link rel="stylesheet" href="css/sections/sticky-action.css">
   <script type="module" src="js/reveal.js"></script>
   <script type="module" src="js/sticky-action.js"></script>
+  <script type="module" src="js/hero-styles.js"></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -163,6 +166,7 @@
 </head>
 <body>
   <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6v12M15 6v12"/></symbol><symbol id="icon-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5.5v13l10.5-6.5z"/></symbol>
     <symbol id="icon-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
   </svg>
 
@@ -211,7 +215,17 @@
           <a class="button" data-primary-action href="https://wa.me/5524992821268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Orvanno%20e%20gostaria%20de%20agendar%20um%20atendimento."><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Agendar atendimento</a>
           <p class="hero-note">Pelo WhatsApp, você agenda uma conversa na loja.</p>
         </div>
-        <div class="placeholder placeholder-4-3">família na cozinha, troca de estilo · 4:3 <span class="provisional">[provisório]</span></div>
+        <div class="hero-visual">
+          <div class="hero-media" data-hero-styles>
+            <img class="hero-media-image is-active" src="img/ambientes/hero-1-960.webp" srcset="img/ambientes/hero-1-480.webp 480w, img/ambientes/hero-1-750.webp 750w, img/ambientes/hero-1-960.webp 960w, img/ambientes/hero-1-1280.webp 1280w, img/ambientes/hero-1-1600.webp 1600w" sizes="(min-width: 72em) 528px, (min-width: 64em) calc(50vw - 3rem), (min-width: 40em) calc(100vw - 4rem), calc(100vw - 2rem)" alt="Cozinha com ilha e uma família de três preparando a refeição, com armários em nogueira escura, aéreos em bege areia e bancada de mármore branco" width="960" height="720" fetchpriority="high">
+            <template data-hero-styles-extra>
+              <img class="hero-media-image" src="img/ambientes/hero-2-960.webp" srcset="img/ambientes/hero-2-480.webp 480w, img/ambientes/hero-2-750.webp 750w, img/ambientes/hero-2-960.webp 960w, img/ambientes/hero-2-1280.webp 1280w, img/ambientes/hero-2-1600.webp 1600w" sizes="(min-width: 72em) 528px, (min-width: 64em) calc(50vw - 3rem), (min-width: 40em) calc(100vw - 4rem), calc(100vw - 2rem)" alt="Cozinha com ilha e uma família de três preparando a refeição, com armários em carvalho claro, aéreos em bege com textura de linho e bancada de mármore branco" width="960" height="720" aria-hidden="true">
+              <img class="hero-media-image" src="img/ambientes/hero-3-960.webp" srcset="img/ambientes/hero-3-480.webp 480w, img/ambientes/hero-3-750.webp 750w, img/ambientes/hero-3-960.webp 960w, img/ambientes/hero-3-1280.webp 1280w, img/ambientes/hero-3-1600.webp 1600w" sizes="(min-width: 72em) 528px, (min-width: 64em) calc(50vw - 3rem), (min-width: 40em) calc(100vw - 4rem), calc(100vw - 2rem)" alt="Cozinha com ilha e uma família de três preparando a refeição, com armários em preto fosco, aéreos em freijó e bancada de pedra veiada em tom bronze" width="960" height="720" aria-hidden="true">
+              <button class="hero-media-toggle" type="button" aria-pressed="false" aria-label="Pausar a troca de estilos da cozinha"><svg class="hero-media-icon hero-media-icon-pause" aria-hidden="true" focusable="false"><use href="#icon-pause"></use></svg><svg class="hero-media-icon hero-media-icon-play" aria-hidden="true" focusable="false"><use href="#icon-play"></use></svg></button>
+            </template>
+          </div>
+          <p class="image-note" hidden>Imagens ilustrativas, geradas por inteligência artificial.</p>
+        </div>
       </div>
     </section>
 
@@ -228,24 +242,25 @@
       <div class="wrap">
         <h2 class="scene-title">Um móvel, um papel para cada momento do dia</h2>
         <p class="lead">O projeto parte da sua rotina: alturas, acessos e circulação pensados para quem usa o ambiente.</p>
+        <p class="image-note" hidden>Imagens ilustrativas, geradas por inteligência artificial.</p>
         <ol class="scene-moments">
           <li class="scene-moment">
-            <div class="placeholder placeholder-4-5">a cozinha organiza · 4:5</div>
+            <img class="media media-4-5" src="img/ambientes/scene-organiza-480.webp" srcset="img/ambientes/scene-organiza-320.webp 320w, img/ambientes/scene-organiza-480.webp 480w, img/ambientes/scene-organiza-640.webp 640w, img/ambientes/scene-organiza-960.webp 960w" sizes="(min-width: 72em) 248px, (min-width: 64em) calc((100vw - 10rem) / 4), (min-width: 40em) calc((100vw - 5rem) / 2), calc((100vw - 3rem) / 2)" alt="De manhã, uma pessoa guarda um pote de vidro numa gaveta larga com divisões de madeira, numa cozinha de bancada limpa" width="480" height="600" loading="lazy">
             <h3 class="scene-moment-title">Organiza.</h3>
             <p class="scene-caption">De manhã, cada coisa está guardada perto de onde é usada.</p>
           </li>
           <li class="scene-moment">
-            <div class="placeholder placeholder-4-5">a cozinha facilita · 4:5</div>
+            <img class="media media-4-5" src="img/ambientes/scene-facilita-480.webp" srcset="img/ambientes/scene-facilita-320.webp 320w, img/ambientes/scene-facilita-480.webp 480w, img/ambientes/scene-facilita-640.webp 640w, img/ambientes/scene-facilita-960.webp 960w" sizes="(min-width: 72em) 248px, (min-width: 64em) calc((100vw - 10rem) / 4), (min-width: 40em) calc((100vw - 5rem) / 2), calc((100vw - 3rem) / 2)" alt="No meio da manhã, um adulto tira uma tigela de tomates de uma despensa alta extraível, ao lado da bancada com a tábua e a faca já separadas" width="480" height="600" loading="lazy">
             <h3 class="scene-moment-title">Facilita.</h3>
             <p class="scene-caption">Você pega o alimento e começa o preparo sem atravessar a cozinha.</p>
           </li>
           <li class="scene-moment">
-            <div class="placeholder placeholder-4-5">a cozinha acolhe · 4:5</div>
+            <img class="media media-4-5" src="img/ambientes/scene-acolhe-480.webp" srcset="img/ambientes/scene-acolhe-320.webp 320w, img/ambientes/scene-acolhe-480.webp 480w, img/ambientes/scene-acolhe-640.webp 640w, img/ambientes/scene-acolhe-960.webp 960w" sizes="(min-width: 72em) 248px, (min-width: 64em) calc((100vw - 10rem) / 4), (min-width: 40em) calc((100vw - 5rem) / 2), calc((100vw - 3rem) / 2)" alt="No fim da tarde, dois adultos conversam na ilha da cozinha: um sentado, com uma xícara, e o outro de pé, com a cafeteira" width="480" height="600" loading="lazy">
             <h3 class="scene-moment-title">Acolhe.</h3>
             <p class="scene-caption">No fim da tarde, a bancada vira lugar de conversa com quem chega.</p>
           </li>
           <li class="scene-moment">
-            <div class="placeholder placeholder-4-5">a cozinha reúne · 4:5</div>
+            <img class="media media-4-5" src="img/ambientes/scene-reune-480.webp" srcset="img/ambientes/scene-reune-320.webp 320w, img/ambientes/scene-reune-480.webp 480w, img/ambientes/scene-reune-640.webp 640w, img/ambientes/scene-reune-960.webp 960w" sizes="(min-width: 72em) 248px, (min-width: 64em) calc((100vw - 10rem) / 4), (min-width: 40em) calc((100vw - 5rem) / 2), calc((100vw - 3rem) / 2)" alt="À noite, uma família de três janta junta na ilha da cozinha, sob luz baixa e quente" width="480" height="600" loading="lazy">
             <h3 class="scene-moment-title">Reúne.</h3>
             <p class="scene-caption">À noite, é ali que a família se encontra para o jantar.</p>
           </li>
@@ -281,6 +296,7 @@
       <div class="wrap">
         <h2 class="showcase-title">Ambientes que a Orvanno projeta</h2>
         <p class="lead">Cada um desenhado a partir das medidas e da rotina de quem vai usar.</p>
+        <p class="image-note" hidden>Imagens ilustrativas, geradas por inteligência artificial.</p>
         <ul class="showcase-tabs">
           <li><a class="showcase-tab" href="#showcase-kitchen">Cozinha</a></li>
           <li><a class="showcase-tab" href="#showcase-closet">Closet</a></li>
@@ -292,27 +308,27 @@
         <div class="showcase-panels">
           <article class="showcase-panel" id="showcase-kitchen">
             <h3 class="showcase-panel-title">Cozinha</h3>
-            <div class="placeholder placeholder-4-3">galeria: cozinha · 4:3</div>
+            <img class="media media-4-3" src="img/ambientes/showcase-cozinha-960.webp" srcset="img/ambientes/showcase-cozinha-480.webp 480w, img/ambientes/showcase-cozinha-640.webp 640w, img/ambientes/showcase-cozinha-960.webp 960w, img/ambientes/showcase-cozinha-1280.webp 1280w, img/ambientes/showcase-cozinha-1600.webp 1600w" sizes="(min-width: 72em) 720px, (min-width: 64em) calc((100vw - 6rem) * 2 / 3 + 1rem), (min-width: 40em) calc((100vw - 4rem) * 0.86), calc((100vw - 2rem) * 0.86)" alt="Cozinha vista de frente, com ilha de mármore branco ao centro e parede de armários em nogueira escura e bege, com nichos iluminados" width="960" height="720" loading="lazy">
           </article>
           <article class="showcase-panel" id="showcase-closet">
             <h3 class="showcase-panel-title">Closet</h3>
-            <div class="placeholder placeholder-4-3">galeria: closet · 4:3</div>
+            <img class="media media-4-3" src="img/ambientes/showcase-closet-960.webp" srcset="img/ambientes/showcase-closet-480.webp 480w, img/ambientes/showcase-closet-640.webp 640w, img/ambientes/showcase-closet-960.webp 960w, img/ambientes/showcase-closet-1280.webp 1280w, img/ambientes/showcase-closet-1600.webp 1600w" sizes="(min-width: 72em) 352px, (min-width: 64em) calc((100vw - 6rem) / 3), (min-width: 40em) calc((100vw - 4rem) * 0.86), calc((100vw - 2rem) * 0.86)" alt="Closet em corredor com armários de carvalho claro, portas de vidro fumê com moldura bronze, gaveteiro central com tampo em textura de linho e roupas dobradas" width="960" height="720" loading="lazy">
           </article>
           <article class="showcase-panel" id="showcase-bedroom">
             <h3 class="showcase-panel-title">Dormitório</h3>
-            <div class="placeholder placeholder-4-3">galeria: dormitório · 4:3</div>
+            <img class="media media-4-3" src="img/ambientes/showcase-dormitorio-960.webp" srcset="img/ambientes/showcase-dormitorio-480.webp 480w, img/ambientes/showcase-dormitorio-640.webp 640w, img/ambientes/showcase-dormitorio-960.webp 960w, img/ambientes/showcase-dormitorio-1280.webp 1280w, img/ambientes/showcase-dormitorio-1600.webp 1600w" sizes="(min-width: 72em) 352px, (min-width: 64em) calc((100vw - 6rem) / 3), (min-width: 40em) calc((100vw - 4rem) * 0.86), calc((100vw - 2rem) * 0.86)" alt="Dormitório de casal com painel de cabeceira em freijó ripado, criados-mudos suspensos pretos e guarda-roupa de portas lisas em bege" width="960" height="720" loading="lazy">
           </article>
           <article class="showcase-panel" id="showcase-living">
             <h3 class="showcase-panel-title">Sala</h3>
-            <div class="placeholder placeholder-4-3">galeria: sala · 4:3</div>
+            <img class="media media-4-3" src="img/ambientes/showcase-sala-960.webp" srcset="img/ambientes/showcase-sala-480.webp 480w, img/ambientes/showcase-sala-640.webp 640w, img/ambientes/showcase-sala-960.webp 960w, img/ambientes/showcase-sala-1280.webp 1280w, img/ambientes/showcase-sala-1600.webp 1600w" sizes="(min-width: 72em) 352px, (min-width: 64em) calc((100vw - 6rem) / 3), (min-width: 40em) calc((100vw - 4rem) * 0.86), calc((100vw - 2rem) * 0.86)" alt="Sala de estar com painel de parede inteira em nogueira escura, nichos pretos iluminados e sofá de linho bege à frente" width="960" height="720" loading="lazy">
           </article>
           <article class="showcase-panel" id="showcase-bathroom">
             <h3 class="showcase-panel-title">Banheiro</h3>
-            <div class="placeholder placeholder-4-3">galeria: banheiro · 4:3</div>
+            <img class="media media-4-3" src="img/ambientes/showcase-banheiro-960.webp" srcset="img/ambientes/showcase-banheiro-480.webp 480w, img/ambientes/showcase-banheiro-640.webp 640w, img/ambientes/showcase-banheiro-960.webp 960w, img/ambientes/showcase-banheiro-1280.webp 1280w, img/ambientes/showcase-banheiro-1600.webp 1600w" sizes="(min-width: 72em) 352px, (min-width: 64em) calc((100vw - 6rem) / 3), (min-width: 40em) calc((100vw - 4rem) * 0.86), calc((100vw - 2rem) * 0.86)" alt="Banheiro com gabinete suspenso em carvalho claro, bancada de mármore branco, espelho grande com moldura bronze e nicho com toalhas dobradas" width="960" height="720" loading="lazy">
           </article>
           <article class="showcase-panel" id="showcase-laundry">
             <h3 class="showcase-panel-title">Lavanderia</h3>
-            <div class="placeholder placeholder-4-3">galeria: lavanderia · 4:3</div>
+            <img class="media media-4-3" src="img/ambientes/showcase-lavanderia-960.webp" srcset="img/ambientes/showcase-lavanderia-480.webp 480w, img/ambientes/showcase-lavanderia-640.webp 640w, img/ambientes/showcase-lavanderia-960.webp 960w, img/ambientes/showcase-lavanderia-1280.webp 1280w, img/ambientes/showcase-lavanderia-1600.webp 1600w" sizes="(min-width: 72em) 352px, (min-width: 64em) calc((100vw - 6rem) / 3), (min-width: 40em) calc((100vw - 4rem) * 0.86), calc((100vw - 2rem) * 0.86)" alt="Lavanderia com armários aéreos bege, base preta, bancada de carvalho claro, máquina de lavar embutida e cesto com toalhas dobradas" width="960" height="720" loading="lazy">
           </article>
         </div>
       </div>
@@ -658,7 +674,7 @@
 
             <label class="cta-consent">
               <input type="checkbox" name="consent" required>
-              <span>Autorizo o uso destes dados para a Orvanno entrar em contato sobre o meu orçamento, conforme a política de privacidade. <span class="provisional">[provisório]</span></span>
+              <span>Concordo que a Orvanno use meu nome, WhatsApp, ambiente, cidade, bairro e tipo de imóvel para entrar em contato sobre o meu orçamento. Posso retirar o consentimento quando quiser. Saiba mais na <a href="privacidade.html" target="_blank" rel="noopener">política de privacidade</a>.</span>
             </label>
           </fieldset>
 
@@ -683,7 +699,7 @@
         <li>Avalie a Orvanno no Google <span class="provisional">[provisório]</span></li>
       </ul>
       <p class="footer-legal">CNPJ 57.155.902/0001-14</p>
-      <p class="footer-legal">Política de privacidade e termos de uso <span class="provisional">[provisório]</span></p>
+      <p class="footer-legal"><a href="privacidade.html">Política de privacidade</a></p>
     </div>
   </footer>
 

@@ -1,0 +1,32 @@
+.privacy {
+  padding-block: var(--space-xl);
+}
+
+.privacy-inner > * {
+  max-width: var(--reading-width);
+}
+
+.privacy-updated {
+  color: rgb(var(--muted));
+  font-size: 0.875rem;
+}
+
+.privacy h2 {
+  margin-top: var(--space-l);
+  font-size: 1.25rem;
+}
+
+.privacy ul {
+  padding-left: var(--space-m);
+}
+
+.privacy li {
+  margin-bottom: var(--space-s);
+}
+
+.privacy .provisional {
+  display: inline;
+  white-space: normal;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
