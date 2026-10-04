@@ -289,12 +289,12 @@ main > .hero {
   .hero-media {
     position: relative;
     inset: auto;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 6 / 7;
     overflow: hidden;
   }
 
   .hero-media::after {
-    background: linear-gradient(to top, rgb(var(--bg)) 0%, rgba(var(--bg), 0.55) 10%, transparent 24%);
+    background: linear-gradient(to top, rgb(var(--bg)) 0%, rgba(var(--bg), 0.75) 18%, rgba(var(--bg), 0.3) 34%, transparent 46%);
   }
 
   .hero-slide {
@@ -312,8 +312,8 @@ main > .hero {
 
   .hero-inner {
     grid-template-rows: auto;
-    gap: var(--space-m);
-    margin-top: -1.75rem;
+    gap: 0.75rem;
+    margin-top: -9rem;
     padding-block: 0 var(--space-l);
   }
 
@@ -321,12 +321,12 @@ main > .hero {
     position: relative;
     z-index: 4;
     align-self: start;
-    text-align: left;
+    text-align: right;
   }
 
   .hero-title {
     max-width: 18ch;
-    margin-inline-start: 0;
+    margin-inline-start: auto;
     font-size: clamp(1.625rem, 1rem + 2.6vw, 2rem);
     line-height: 1.15;
     text-wrap: balance;
@@ -335,5 +335,9 @@ main > .hero {
 
   .hero-title-turn {
     margin-top: 0.2em;
+  }
+
+  .hero-persona {
+    min-height: 0;
   }
 }
