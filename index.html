@@ -53,6 +53,8 @@
   <link rel="stylesheet" href="css/sections/showcase.css">
   <link rel="stylesheet" href="css/sections/details.css">
   <link rel="stylesheet" href="css/components/dialog.css">
+  <link rel="stylesheet" href="css/vendor/photoswipe.css">
+  <link rel="stylesheet" href="css/components/gallery.css">
   <link rel="stylesheet" href="css/components/contact.css">
   <link rel="stylesheet" href="css/sections/curation.css">
   <link rel="stylesheet" href="css/sections/fit.css">
@@ -66,6 +68,7 @@
   <script type="module" src="js/hero-timeline.js"></script>
   <script type="module" src="js/sticky-action.js"></script>
   <script type="module" src="js/dialog.js"></script>
+  <script type="module" src="js/gallery.js"></script>
   <script type="module" src="js/whatsapp.js"></script>
   <script type="module" src="js/contact.js"></script>
   <script type="module" src="js/nav-menu.js"></script>
@@ -356,19 +359,33 @@
         </div>
         <div class="showcase-gallery">
           <figure class="media showcase-feature">
-            <img src="img/ambientes/quarto-solteiro-b.webp" alt="Quarto com guarda-roupa de portas de espelho, nichos abertos, painéis na parede e bancada." width="836" height="467" loading="lazy">
-            <figcaption class="showcase-caption">Quarto com guarda-roupa espelhado</figcaption>
-          </figure>
+              <img src="img/moveis/sala-tv-vertical-1086.webp" srcset="img/moveis/sala-tv-vertical-640.webp 640w, img/moveis/sala-tv-vertical-1086.webp 1086w" sizes="(min-width: 64em) 36vw, 100vw" alt="Sala com rack suspenso, painel da televisão e armário alto na cor bege." width="1086" height="1446" data-full="img/moveis/sala-tv-vertical-1086.webp" data-full-width="1086" data-full-height="1446" loading="lazy">
+              <figcaption class="showcase-caption">Rack suspenso e armário alto</figcaption>
+            </figure>
           <div class="showcase-side">
             <figure class="media showcase-small">
-              <img src="img/ambientes/quarto-casal.webp" alt="Dormitório de casal com cabeceira ripada e criado-mudo com gavetas." width="408" height="268" loading="lazy">
-              <figcaption class="showcase-caption">Dormitório de casal</figcaption>
+              <img src="img/moveis/cozinha-800.webp" srcset="img/moveis/cozinha-480.webp 480w, img/moveis/cozinha-800.webp 800w" sizes="(min-width: 64em) 22vw, 50vw" alt="Cozinha estreita com armários bege, bancada de granito preto e revestimento em zigue-zague preto e branco." width="800" height="1067" data-full="img/moveis/cozinha-1086.webp" data-full-width="1086" data-full-height="1448" loading="lazy">
+              <figcaption class="showcase-caption">Cozinha planejada</figcaption>
             </figure>
             <figure class="media showcase-small">
-              <img src="img/ambientes/quarto-solteiro-a.webp" alt="Ambiente com bancada de estudo, prateleiras e nichos com iluminação embutida." width="403" height="268" loading="lazy">
-              <figcaption class="showcase-caption">Bancada de estudo</figcaption>
+              <img src="img/moveis/banheiro-800.webp" srcset="img/moveis/banheiro-480.webp 480w, img/moveis/banheiro-800.webp 800w" sizes="(min-width: 64em) 22vw, 50vw" alt="Gabinete suspenso cinza com tampo de granito preto e cuba de apoio branca." width="800" height="1067" data-full="img/moveis/banheiro-1086.webp" data-full-width="1086" data-full-height="1448" loading="lazy">
+              <figcaption class="showcase-caption">Gabinete de banheiro</figcaption>
             </figure>
           </div>
+        </div>
+        <div class="showcase-row">
+          <figure class="media showcase-tile">
+              <img src="img/moveis/painel-ripado-640.webp" alt="Parede com painel ripado de madeira clara, prateleiras e forro de gesso com iluminação embutida." width="640" height="853" data-full="img/moveis/painel-ripado-1086.webp" data-full-width="1086" data-full-height="1448" loading="lazy">
+              <figcaption class="showcase-caption">Painel ripado</figcaption>
+            </figure>
+          <figure class="media showcase-tile">
+              <img src="img/moveis/armario-azul-640.webp" alt="Armário azul com nichos de madeira escura e tampo de granito." width="640" height="853" data-full="img/moveis/armario-azul-1086.webp" data-full-width="1086" data-full-height="1448" loading="lazy">
+              <figcaption class="showcase-caption">Armário com nichos</figcaption>
+            </figure>
+          <figure class="media showcase-tile">
+              <img src="img/moveis/rodizio-640.webp" alt="Detalhe da lateral de um móvel de madeira clara sobre rodízio transparente." width="640" height="853" data-full="img/moveis/rodizio-1086.webp" data-full-width="1086" data-full-height="1448" loading="lazy">
+              <figcaption class="showcase-caption">Detalhe do rodízio</figcaption>
+            </figure>
         </div>
         <p class="showcase-more"><a href="https://www.instagram.com/orvannovr/" target="_blank" rel="noopener">Ver mais projetos no Instagram</a></p>
       </div>
@@ -471,13 +488,13 @@
       <div class="wrap store-inner">
         <div class="store-gallery">
           <figure class="media store-photo store-photo-main">
-            <img src="img/loja/fachada-1086.webp" srcset="img/loja/fachada-640.webp 640w, img/loja/fachada-1086.webp 1086w" sizes="(min-width: 64em) 50vw, 90vw" alt="Fachada da loja e showroom Orvanno Planejados, com a faixa vermelha, o letreiro sobre a porta de vidro e o atendimento à vista." width="1086" height="910" loading="lazy">
+            <img src="img/loja/fachada-1086.webp" srcset="img/loja/fachada-640.webp 640w, img/loja/fachada-1086.webp 1086w" sizes="(min-width: 64em) 50vw, 90vw" alt="Fachada da loja e showroom Orvanno Planejados, com a faixa vermelha, o letreiro sobre a porta de vidro e o atendimento à vista." width="1086" height="910" data-caption="Fachada da loja" loading="lazy">
           </figure>
           <figure class="media store-photo">
-            <img src="img/loja/entrada-896.webp" srcset="img/loja/entrada-480.webp 480w, img/loja/entrada-896.webp 896w" sizes="(min-width: 64em) 12vw, 25vw" alt="Entrada do local, com a placa vertical da Orvanno Planejados ao lado da placa da Nexus Questor." width="896" height="960" loading="lazy">
+            <img src="img/loja/entrada-896.webp" srcset="img/loja/entrada-480.webp 480w, img/loja/entrada-896.webp 896w" sizes="(min-width: 64em) 12vw, 25vw" alt="Entrada do local, com a placa vertical da Orvanno Planejados ao lado da placa da Nexus Questor." width="896" height="960" data-caption="Entrada" loading="lazy">
           </figure>
           <figure class="media store-photo">
-            <img src="img/loja/predio-1402.webp" srcset="img/loja/predio-800.webp 800w, img/loja/predio-1402.webp 1402w" sizes="(min-width: 64em) 12vw, 25vw" alt="Prédio da loja e showroom Orvanno Planejados, com a faixa vermelha, o número 126 e carros no estacionamento em frente." width="1402" height="1032" loading="lazy">
+            <img src="img/loja/predio-1402.webp" srcset="img/loja/predio-800.webp 800w, img/loja/predio-1402.webp 1402w" sizes="(min-width: 64em) 12vw, 25vw" alt="Prédio da loja e showroom Orvanno Planejados, com a faixa vermelha, o número 126 e carros no estacionamento em frente." width="1402" height="1032" data-caption="Prédio e estacionamento" loading="lazy">
           </figure>
         </div>
         <div class="store-text">
@@ -673,29 +690,6 @@
     </div>
   </dialog>
 
-  <dialog class="finishes-dialog store-dialog tone-dark" id="store-dialog" aria-labelledby="store-dialog-title">
-    <div class="finishes-dialog-inner">
-      <header class="finishes-dialog-head">
-        <h2 class="finishes-dialog-title" id="store-dialog-title">Loja e showroom</h2>
-        <button class="finishes-close" type="button" data-dialog-close aria-label="Fechar">Fechar</button>
-      </header>
-      <div class="finishes-dialog-body">
-      <div class="finishes-layout">
-        <figure class="finishes-preview" aria-live="polite">
-          <img src="img/loja/fachada-1086.webp" alt="Fachada da loja e showroom Orvanno Planejados, com a faixa vermelha, o letreiro sobre a porta de vidro e o atendimento à vista." width="1086" height="910">
-          <figcaption class="finishes-preview-caption">Fachada da loja</figcaption>
-        </figure>
-        <div class="finishes-catalog">
-          <ul class="details-swatches">
-            <li><figure class="details-swatch store-swatch"><img src="img/loja/fachada-1086.webp" alt="Fachada da loja e showroom Orvanno Planejados, com a faixa vermelha, o letreiro sobre a porta de vidro e o atendimento à vista." width="1086" height="910" loading="lazy"><figcaption>Fachada da loja</figcaption></figure></li>
-            <li><figure class="details-swatch store-swatch"><img src="img/loja/entrada-896.webp" alt="Entrada do local, com a placa vertical da Orvanno Planejados ao lado da placa da Nexus Questor." width="896" height="960" loading="lazy"><figcaption>Entrada</figcaption></figure></li>
-            <li><figure class="details-swatch store-swatch"><img src="img/loja/predio-1402.webp" alt="Prédio da loja e showroom Orvanno Planejados, com a faixa vermelha, o número 126 e carros no estacionamento em frente." width="1402" height="1032" loading="lazy"><figcaption>Prédio e estacionamento</figcaption></figure></li>
-          </ul>
-        </div>
-      </div>
-      </div>
-    </div>
-  </dialog>
   <dialog class="contact-dialog tone-dark" id="contact-dialog" aria-labelledby="contact-title">
     <div class="contact-inner">
       <header class="contact-head">

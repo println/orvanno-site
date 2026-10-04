@@ -27,14 +27,39 @@
 }
 
 .showcase-feature img {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
 }
 
 .showcase-small img {
-  aspect-ratio: 1;
+  aspect-ratio: 3 / 4;
+}
+
+.showcase-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-m);
+  margin-top: var(--space-m);
+}
+
+.showcase-tile {
+  position: relative;
+  overflow: hidden;
+}
+
+.showcase-tile img {
+  aspect-ratio: 4 / 5;
+}
+
+.showcase-tile:last-child {
+  grid-column: 1 / -1;
+}
+
+.showcase-tile:last-child img {
+  aspect-ratio: 16 / 9;
 }
 
 .showcase-caption {
+  pointer-events: none;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -61,13 +86,13 @@
   }
 
   .showcase-gallery {
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-    height: clamp(28rem, 38vw, 38rem);
+    grid-template-columns: minmax(0, 2fr) minmax(0, 2fr);
+    height: clamp(30rem, 46vw, 44rem);
   }
 
   .showcase-side {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: minmax(0, 1fr);
   }
 
   .showcase-gallery img {
@@ -75,6 +100,18 @@
     inset: 0;
     height: 100%;
     aspect-ratio: auto;
+  }
+
+  .showcase-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .showcase-tile:last-child {
+    grid-column: auto;
+  }
+
+  .showcase-tile:last-child img {
+    aspect-ratio: 4 / 5;
   }
 
   .showcase-caption {

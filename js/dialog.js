@@ -184,27 +184,6 @@ function setupShowroom(id, sources, label) {
 
   select(dialog.querySelector(".swatch-zoom"));
 
-  if (dialog.classList.contains("store-dialog")) {
-    const buttons = [...dialog.querySelectorAll(".swatch-zoom")];
-    let startX = 0;
-    let startY = 0;
-    preview.addEventListener("touchstart", (event) => {
-      startX = event.touches[0].clientX;
-      startY = event.touches[0].clientY;
-    }, { passive: true });
-    preview.addEventListener("touchend", (event) => {
-      const dx = event.changedTouches[0].clientX - startX;
-      const dy = event.changedTouches[0].clientY - startY;
-      if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy)) return;
-      const step = dx < 0 ? 1 : -1;
-      const next = buttons[(buttons.indexOf(current) + step + buttons.length) % buttons.length];
-      select(next);
-      next.scrollIntoView({ block: "nearest", inline: "nearest" });
-    });
-  }
-
-
-
   for (const figure of document.querySelectorAll(sources)) {
 
     const target = bySrc.get(figure.querySelector("img").getAttribute("src"));
@@ -238,8 +217,6 @@ if (typeof HTMLDialogElement === "function") {
   setupDialogs();
 
   setupShowroom("finishes-dialog", ".finishes .details-swatch", "Ver no mostruário");
-
-  setupShowroom("store-dialog", ".store-gallery .store-photo", "Ampliar foto");
 
 }
 
