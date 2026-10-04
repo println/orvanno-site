@@ -732,16 +732,23 @@
                 <option>Outra</option>
               </select>
             </label>
-            <label class="contact-field">
+            <label class="contact-field" data-neighborhood-list>
               <span class="contact-label">Bairro</span>
-              <input class="contact-input" type="text" name="neighborhood" autocomplete="address-level3" required>
+              <select class="contact-input contact-select" name="neighborhood_choice" required>
+                <option value="">Escolha a cidade</option>
+              </select>
             </label>
           </div>
+          <label class="contact-field" data-neighborhood-text hidden>
+            <span class="contact-label">Qual bairro?</span>
+            <input class="contact-input" type="text" name="neighborhood" autocomplete="address-level3">
+          </label>
           <fieldset class="contact-radios">
-            <legend class="contact-label">O imóvel é <span class="contact-optional">(opcional)</span></legend>
+            <legend class="contact-label">O projeto é para <span class="contact-optional">(opcional)</span></legend>
             <label><input type="radio" name="home" value="Casa"> Casa</label>
             <label><input type="radio" name="home" value="Apartamento"> Apartamento</label>
             <label><input type="radio" name="home" value="Loja/escritório"> Loja/escritório</label>
+            <label><input type="radio" name="home" value="Outro"> Outro</label>
           </fieldset>
           <p class="contact-error" role="alert" hidden>Preencha nome, ambiente, cidade e bairro.</p>
           <button class="button button-lg contact-submit" type="submit"><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Continuar no WhatsApp</button>
