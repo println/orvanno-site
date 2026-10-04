@@ -1,3 +1,5 @@
+import { openWhatsApp } from "./whatsapp.js";
+
 // Bairros por cidade: listas passadas por Proto.
 const NEIGHBORHOODS = {
   "Volta Redonda": ["Açude", "Aero Clube", "Água Limpa", "Aterrado", "Barreira Cravo", "Bela Vista", "Belmonte", "Belo Horizonte", "Bom Jesus", "Casa de Pedra", "Centro", "Coqueiros", "Conforto", "Dom Bosco", "Eucaliptal", "Ilha Parque", "Jardim Amália", "Jardim Belmonte", "Jardim Belvedere", "Jardim Caroline", "Jardim Cidade do Aço", "Jardim Normândia", "Jardim Paraíba", "Laranjal", "Mariana Torres", "Monte Castelo", "Morada da Colina", "Niterói", "Nossa Senhora das Graças", "Nova Primavera", "Ortiz", "Paraíso", "Parque das Ilhas", "Ponte Alta", "Rústico", "Retiro", "Roma", "Santa Cruz", "Santa Rita do Zarur", "Santo Agostinho", "São Carlos", "São Cristóvão", "São Geraldo", "São João", "São Lucas", "Sessenta", "Três Poços", "Vila Americana", "Vila Brasília", "Vila Mury", "Vila Rica", "Voldac", "Candelária", "Forte Leme", "Jardim Primavera", "Minerlândia", "Osvaldo Cruz", "Padre Josimo", "Pinto da Serra", "São João Batista", "São Luiz", "Sidervile", "Vila Santa Cecília", "Siderlândia"],
@@ -89,9 +91,7 @@ function setup() {
       missing[0].focus();
       return;
     }
-    const url = `https://wa.me/${form.dataset.whatsapp}?text=${encodeURIComponent(message(data))}`;
-    const opened = window.open(url, "_blank", "noopener");
-    if (!opened) window.location.href = url;
+    openWhatsApp(form.dataset.whatsapp, message(data));
     dialog.close();
   });
 }
