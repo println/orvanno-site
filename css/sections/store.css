@@ -99,3 +99,32 @@
 .store-dialog .finishes-preview {
   grid-template-columns: minmax(0, 1fr);
 }
+
+.store-dialog .finishes-preview {
+  touch-action: pan-y;
+}
+
+@media (min-width: 48em) {
+  .store-dialog .finishes-layout {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+  }
+
+  .store-dialog .finishes-preview {
+    position: static;
+    justify-items: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .store-dialog .finishes-preview img {
+    width: auto;
+    max-width: 100%;
+    max-height: calc(100dvh - var(--nav-height) - 24rem);
+  }
+
+  .store-dialog .finishes-catalog .details-swatches {
+    grid-template-columns: repeat(3, 8rem);
+    justify-content: center;
+  }
+}
