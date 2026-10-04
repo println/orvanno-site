@@ -733,16 +733,17 @@
               </select>
             </label>
             <label class="contact-field">
-              <span class="contact-label">Bairro <span class="contact-optional">(opcional)</span></span>
-              <input class="contact-input" type="text" name="neighborhood" autocomplete="address-level3">
+              <span class="contact-label">Bairro</span>
+              <input class="contact-input" type="text" name="neighborhood" autocomplete="address-level3" required>
             </label>
           </div>
           <fieldset class="contact-radios">
             <legend class="contact-label">O imóvel é <span class="contact-optional">(opcional)</span></legend>
             <label><input type="radio" name="home" value="Casa"> Casa</label>
             <label><input type="radio" name="home" value="Apartamento"> Apartamento</label>
+            <label><input type="radio" name="home" value="Loja/escritório"> Loja/escritório</label>
           </fieldset>
-          <p class="contact-error" role="alert" hidden>Preencha nome, ambiente e cidade.</p>
+          <p class="contact-error" role="alert" hidden>Preencha nome, ambiente, cidade e bairro.</p>
           <button class="button button-lg contact-submit" type="submit"><svg class="button-icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>Continuar no WhatsApp</button>
           <p class="contact-note">Nada é enviado ao site: as respostas vão só na mensagem que você manda pelo WhatsApp. Veja a <a href="privacidade.html" target="_blank" rel="noopener">política de privacidade</a>.</p>
         </form>
