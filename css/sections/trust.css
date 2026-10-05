@@ -1,5 +1,9 @@
 .trust {
-  border-block: 1px solid rgb(var(--line));
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(var(--line), 0.3) 0 1px,
+    transparent 1px 4px
+  );
 }
 
 main > .trust {
@@ -14,11 +18,12 @@ main > .trust {
 }
 
 .trust-item {
-  padding: var(--space-l) var(--space-m) var(--space-l) 0;
+  position: relative;
+  padding: var(--space-l) var(--space-m);
+  text-align: center;
 }
 
 .trust-item:nth-child(even) {
-  padding-left: var(--space-m);
   border-left: 1px solid rgb(var(--line));
 }
 
@@ -29,12 +34,21 @@ main > .trust {
 .trust-item > span,
 .trust-link {
   display: grid;
+  justify-items: center;
   gap: var(--space-xs);
 }
 
 .trust-link {
   color: inherit;
   text-decoration: none;
+}
+
+.trust .trust-item .trust-link::after {
+  position: absolute;
+  top: var(--space-s);
+  right: var(--space-s);
+  margin: 0;
+  color: rgb(var(--muted));
 }
 
 .trust-value {
@@ -61,7 +75,7 @@ main > .trust {
 
 .trust-label {
   color: rgb(var(--muted));
-  font-size: var(--text-label);
+  font-size: 1rem;
   line-height: 1.4;
 }
 
@@ -81,7 +95,6 @@ main > .trust {
   }
 
   .trust-item:first-child {
-    padding-left: 0;
     border-left: 0;
   }
 }
