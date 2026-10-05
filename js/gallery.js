@@ -7,11 +7,16 @@ function rem() {
   return parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
 }
 
+function headHeight() {
+  return parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--nav-height")) * rem() || 4 * rem();
+}
+
 function padding() {
   const unit = rem();
-  if (wide.matches) return { top: 4 * unit, bottom: 4.5 * unit, left: 1.5 * unit, right: 10 * unit };
+  const top = headHeight() + unit;
+  if (wide.matches) return { top, bottom: 4.5 * unit, left: 1.5 * unit, right: 10 * unit };
   const thumb = window.matchMedia("(min-width: 40em)").matches ? 7 : 5.5;
-  return { top: 3.5 * unit, bottom: (thumb + 2 + 3.5) * unit, left: unit, right: unit };
+  return { top, bottom: (thumb + 2 + 3.5) * unit, left: unit, right: unit };
 }
 
 function makeZoom(image, label) {
@@ -118,6 +123,7 @@ function setupGallery(sources) {
     showHideAnimationType: "zoom",
     indexIndicatorSep: " / ",
     closeTitle: "Fechar",
+    closeSVG: '<span class="gallery-close">Fechar</span>',
     zoomTitle: "Ampliar",
     arrowPrevTitle: "Foto anterior",
     arrowNextTitle: "Próxima foto",
