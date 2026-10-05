@@ -14,13 +14,6 @@
   font-size: 1.5rem;
 }
 
-.finishes-note {
-  max-width: 30ch;
-  margin-bottom: var(--space-l);
-  color: rgb(var(--muted));
-  font-size: 0.9375rem;
-}
-
 .finishes .details-swatches {
   grid-template-columns: repeat(8, minmax(0, 1fr));
   margin-bottom: 0;
