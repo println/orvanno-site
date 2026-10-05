@@ -49,7 +49,7 @@
   content: "\201C";
   position: absolute;
   top: -0.1em;
-  left: var(--space-s);
+  left: var(--space-l);
   color: rgba(var(--accent), 0.5);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 4.5rem;
