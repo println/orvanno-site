@@ -86,7 +86,17 @@ main > .hero {
 }
 
 .hero-persona {
+  display: grid;
   min-height: 6.5rem;
+}
+
+.hero-persona > .hero-moment {
+  grid-area: 1 / 1;
+}
+
+.hero-persona > .hero-moment[hidden] {
+  display: block;
+  visibility: hidden;
 }
 
 .hero-moment-time {
