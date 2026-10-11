@@ -60,6 +60,9 @@ main > .partners {
     animation: partners-scroll 40s linear infinite;
   }
 
+}
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) {
   .partners-marquee:hover .partners-list {
     animation-play-state: paused;
   }
@@ -108,8 +111,10 @@ main > .partners {
   text-decoration: none;
 }
 
-.partner a:hover {
-  color: rgb(var(--accent-text));
+@media (hover: hover) {
+  .partner a:hover {
+    color: rgb(var(--accent-text));
+  }
 }
 
 .partner a[target="_blank"]::after {
