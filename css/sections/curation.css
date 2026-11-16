@@ -232,6 +232,10 @@
 }
 
 @media (min-width: 64em) {
+  .curation-head {
+    margin-bottom: var(--space-l);
+  }
+
   .curation-inner {
     grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
     column-gap: 6rem;

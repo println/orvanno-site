@@ -149,22 +149,12 @@ main > .hero {
 
 .hero-stops {
   position: relative;
-  display: flex;
+  display: grid;
   flex: 1;
-  gap: var(--space-m);
+  grid-template-columns: repeat(var(--count, 7), minmax(0, 1fr));
   margin: 0;
   padding: 0;
-  overflow-x: auto;
   list-style: none;
-  scrollbar-width: none;
-}
-
-.hero-stops::-webkit-scrollbar {
-  display: none;
-}
-
-.hero-stops li {
-  flex: 1 0 auto;
 }
 
 .hero-stop {
@@ -172,7 +162,8 @@ main > .hero {
   display: grid;
   width: 100%;
   min-height: 3.5rem;
-  padding: var(--space-m) 0 0;
+  align-content: start;
+  padding: var(--space-m) var(--space-s) 0 0;
   border: 0;
   background: none;
   color: rgb(var(--muted));
@@ -196,7 +187,6 @@ main > .hero {
 .hero-stop-name {
   display: none;
   font-size: var(--text-label);
-  white-space: nowrap;
 }
 
 .hero-stop-occasion .hero-stop-time {
@@ -260,14 +250,9 @@ main > .hero {
 }
 
 @media (max-width: 47.99em) {
-  .hero-stops {
-    justify-content: space-between;
-    gap: var(--space-xs);
-    overflow: visible;
-  }
-
-  .hero-stops li {
-    flex: none;
+  .hero-stop {
+    padding-right: 0;
+    text-align: center;
   }
 
   .hero-stop-time {
